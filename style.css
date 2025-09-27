@@ -597,3 +597,79 @@ footer {
         display: flex;
     }
 }
+
+/* ------------------------------------------------------ */
+/* Digital Card Styles                                   */
+/* The digital card provides a clean, shareable summary   */
+/* of your contact information along with a QR code that  */
+/* links back to your website. The design uses the same   */
+/* colour palette and typography as the rest of the site   */
+/* for a cohesive look.                                    */
+.digital-card-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 2rem;
+}
+
+.digital-card {
+    background: linear-gradient(135deg, rgba(0, 191, 166, 0.15), rgba(240, 165, 0, 0.15));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.digital-card-name {
+    font-family: var(--font-family-heading);
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 0.25rem;
+}
+
+.digital-card-title {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.digital-card-qr {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.digital-card-instruction {
+    color: var(--color-muted);
+    margin-bottom: 1rem;
+}
+
+.digital-card-details {
+    text-align: left;
+    margin-top: 1rem;
+    color: var(--color-light);
+}
+
+.digital-card-details p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.digital-card-details a {
+    color: var(--color-accent);
+    transition: color var(--transition-speed);
+}
+
+.digital-card-details a:hover {
+    text-decoration: underline;
+    color: var(--color-secondary);
+}

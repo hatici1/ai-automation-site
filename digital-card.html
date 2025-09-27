@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Digital Card – AI Automation &amp; Engineering Solutions</title>
+    <!-- Google Fonts for futuristic typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yEMJL0VZ4Pp9SQaFvudCs2O5mEPDUYLu+wuO0FJw2bqdJOXwudCbp6tsvNCD6LtFxrIeqZoUKwOUZF0etQXw6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="digital-card-container">
+        <div class="digital-card">
+            <h1 class="digital-card-name">Hasan&nbsp;Atici</h1>
+            <p class="digital-card-title">AI&nbsp;Automation &amp; Engineering Solutions</p>
+            <!-- QR code image loaded from a free API. Replace the data parameter with your final domain if different. -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https%3A%2F%2Fai-automation-site-nu.vercel.app&size=300x300" alt="Website QR Code" class="digital-card-qr">
+            <p class="digital-card-instruction">Scan to visit our website</p>
+            <div class="digital-card-details">
+                <p><i class="fa-solid fa-envelope"></i> <span id="card-email-link"></span></p>
+                <p><i class="fa-solid fa-location-dot"></i> Köln, Germany</p>
+                <p><i class="fa-solid fa-calendar-days"></i> <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" target="_blank" rel="noopener">Book a 30&nbsp;min Call</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Script for email obfuscation on the digital card -->
+    <script>
+      (function() {
+        var encoded = 'aGFzYW5tLmF0aWNpQGdtYWlsLmNvbQ==';
+        var email = atob(encoded);
+        var emailSpan = document.getElementById('card-email-link');
+        if (emailSpan) {
+          var link = document.createElement('a');
+          link.href = 'mailto:' + email;
+          link.textContent = email;
+          emailSpan.appendChild(link);
+        }
+      })();
+    </script>
+</body>
+</html>

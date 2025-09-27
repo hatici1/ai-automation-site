@@ -51,11 +51,12 @@
                 <h2 data-i18n="contact.details.heading">Contact Information</h2>
                 <p data-i18n="contact.description">We’d love to hear from you. Get in touch via email or schedule a call.</p>
                 <div class="contact-actions">
-                    <a href="mailto:hasanm.atici@gmail.com" class="btn secondary-btn" data-i18n="contact.emailButton">Email Us</a>
+                    <!-- The email button will be populated via JavaScript to protect the address from harvesters -->
+                    <a id="email-button" href="#" class="btn secondary-btn" data-i18n="contact.emailButton">Email Us</a>
                     <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" class="btn primary-btn" target="_blank" rel="noopener" data-i18n="contact.scheduleButton">Schedule a Call</a>
                 </div>
                 <div class="contact-details">
-                    <p><i class="fa-solid fa-envelope"></i> <span data-i18n="contact.details.email">Email</span> <a href="mailto:hasanm.atici@gmail.com">hasanm.atici@gmail.com</a></p>
+                    <p><i class="fa-solid fa-envelope"></i> <span data-i18n="contact.details.email">Email</span> <span id="email-link"></span></p>
                     <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="contact.details.location">Köln, Germany (Europe/Berlin)</span></p>
                 </div>
             </div>
@@ -86,5 +87,27 @@
     <script src="script.js"></script>
     <!-- Internationalisation script -->
     <script src="translations.js"></script>
+
+    <!-- Email obfuscation script: decodes a base64-encoded email address to protect against harvesters -->
+    <script>
+      (function() {
+        // Base64-encoded version of "hasanm.atici@gmail.com". Using atob to decode hides the plain text from most crawlers.
+        var encoded = 'aGFzYW5tLmF0aWNpQGdtYWlsLmNvbQ==';
+        var email = atob(encoded);
+        // Populate the email link in the contact details
+        var emailLinkSpan = document.getElementById('email-link');
+        if (emailLinkSpan) {
+          var link = document.createElement('a');
+          link.href = 'mailto:' + email;
+          link.textContent = email;
+          emailLinkSpan.appendChild(link);
+        }
+        // Set the mailto href on the button
+        var emailButton = document.getElementById('email-button');
+        if (emailButton) {
+          emailButton.href = 'mailto:' + email;
+        }
+      })();
+    </script>
 </body>
 </html>

@@ -12,7 +12,8 @@ The site consists of several HTML pages, a shared stylesheet and scripts:
 - `services.html` – Detailed descriptions of available services (n8n automations, AI engineering, consulting & integration).
 - `projects.html` – Examples of previous work to demonstrate capabilities.
 - `about.html` – Mission statement and background information about the business.
-    - `contact.html` – Contact information page. Includes buttons to email directly and schedule a call via Cal.com; no form is submitted on the page.
+    - `contact.html` – Contact information page. It now uses client‑side obfuscation to hide your email from crawlers and provides buttons to email you directly or schedule a call via Cal.com.
+    - `digital-card.html` – A shareable digital business card with a QR code linking back to your website, your contact details and a call booking link.
 - `style.css` – Global styles with responsive breakpoints, accessible color palette and futuristic design touches.
 - `script.js` – Script to toggle the mobile navigation menu.
 - `translations.js` – Client‑side internationalisation system supporting English, German and Turkish.
@@ -59,6 +60,14 @@ Because the site is static, you can host it on any web server (e.g., Nginx, Apac
 ## Customization
 
 You can customize the content by editing the HTML files. To change colors or typography, update the CSS variables in `style.css`. The hero image (`images/hero.png`) can be replaced with another image; ensure it has an appropriate aspect ratio and update the `<img>` tag in `index.html` accordingly.
+
+### Protecting your email address
+
+Web crawlers can harvest plain‑text email addresses from web pages and use them for spam. To reduce this risk, the site obfuscates your address using a base64‑encoded string and decodes it on the client with JavaScript. This keeps the email address out of the page’s source code and deters unsophisticated bots. If you change your email, update the encoded string in the `<script>` sections of `contact.html` and `digital-card.html` (see the comments in those files).
+
+### Digital business card & QR code
+
+The `digital-card.html` page provides a minimalist, mobile‑friendly business card that you can share with clients. It features your name, company, location, email link and a call‑booking link, along with a QR code that leads back to your website. The QR code is generated via the free service at `api.qrserver.com`; you can change the target URL by modifying the `data` query parameter in the image’s `src` attribute. Once deployed, scan the QR code to test that it opens your site correctly.
 
 ### Scheduling appointments with Cal.com
 
