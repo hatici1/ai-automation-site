@@ -16,11 +16,18 @@
             <div class="logo">AI Solutions</div>
             <nav>
                 <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="services.html" class="active" data-i18n="nav.services">Services</a></li>
+                    <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    <li class="lang-selector">
+                        <select id="language-selector" aria-label="Select language">
+                            <option value="en">EN</option>
+                            <option value="de">DE</option>
+                            <option value="tr">TR</option>
+                        </select>
+                    </li>
                 </ul>
                 <div id="hamburger" class="hamburger">
                     <span></span>
@@ -34,23 +41,23 @@
     <main>
         <section class="page-hero">
             <div class="container">
-                <h1>Our Services</h1>
-                <p>Explore the range of solutions we offer to help automate and transform your business.</p>
+                <h1 data-i18n="services.pageHeading">Our Services</h1>
+                <p data-i18n="services.pageSubtitle">Explore the range of solutions we offer to help automate and transform your business.</p>
             </div>
         </section>
 
         <!-- n8n Automations -->
         <section id="n8n" class="service-detail">
             <div class="container">
-                <h2>n8n Automations</h2>
-                <p>n8n is a flexible automation platform that lets you build sophisticated workflows without limits on logic. It provides a visual editor for fast iteration where you see results instantly. The platform comes with over 400 pre‑configured integrations, so you can automate tasks across your favourite apps without writing boilerplate code. You can also fall back to custom code when you need full control and easily merge, loop or filter your data. Triggers range from scheduled cron jobs to webhooks, enabling nested workflows and flexible orchestration. Built‑in AI nodes allow workflows to summarise documents or answer questions by connecting with large language models.</p>
-                <p>We design and build n8n workflows tailored to your business. Whether you're capturing leads, synchronising data between systems, or building complex AI agent pipelines, we'll create reliable automation that scales as your needs grow. Our team can host workflows in the cloud or on‑premises, and we use robust debugging and monitoring features to ensure everything runs smoothly.</p>
+                <h2 data-i18n="services.n8n.title">n8n Automations</h2>
+                <p data-i18n="services.n8n.text1">n8n is a flexible automation platform that lets you build sophisticated workflows without limits on logic. It provides a visual editor for fast iteration where you see results instantly. The platform comes with over 400 pre‑configured integrations, so you can automate tasks across your favourite apps without writing boilerplate code. You can also fall back to custom code when you need full control and easily merge, loop or filter your data. Triggers range from scheduled cron jobs to webhooks, enabling nested workflows and flexible orchestration. Built‑in AI nodes allow workflows to summarise documents or answer questions by connecting with large language models.</p>
+                <p data-i18n="services.n8n.text2">We design and build n8n workflows tailored to your business. Whether you're capturing leads, synchronising data between systems, or building complex AI agent pipelines, we'll create reliable automation that scales as your needs grow. Our team can host workflows in the cloud or on‑premises, and we use robust debugging and monitoring features to ensure everything runs smoothly.</p>
                 <ul class="feature-list">
-                    <li><strong>Visual workflow design:</strong><span> Build and iterate quickly using n8n’s visual editor.</span></li>
-                    <li><strong>Rich integrations:</strong><span> Access 400+ built‑in connectors or use HTTP requests to connect any API.</span></li>
-                    <li><strong>Custom logic:</strong><span> Add JavaScript or Python code nodes for bespoke transformations.</span></li>
-                    <li><strong>Diverse triggers:</strong><span> Cron jobs, webhooks and event streams kick‑off your workflows.</span></li>
-                    <li><strong>AI nodes:</strong><span> Incorporate language models and summarisation tasks directly into workflows.</span></li>
+                    <li data-i18n="services.n8n.feature1"><strong>Visual workflow design:</strong><span> Build and iterate quickly using n8n’s visual editor.</span></li>
+                    <li data-i18n="services.n8n.feature2"><strong>Rich integrations:</strong><span> Access 400+ built‑in connectors or use HTTP requests to connect any API.</span></li>
+                    <li data-i18n="services.n8n.feature3"><strong>Custom logic:</strong><span> Add JavaScript or Python code nodes for bespoke transformations.</span></li>
+                    <li data-i18n="services.n8n.feature4"><strong>Diverse triggers:</strong><span> Cron jobs, webhooks and event streams kick‑off your workflows.</span></li>
+                    <li data-i18n="services.n8n.feature5"><strong>AI nodes:</strong><span> Incorporate language models and summarisation tasks directly into workflows.</span></li>
                 </ul>
             </div>
         </section>
@@ -58,15 +65,15 @@
         <!-- AI Engineering -->
         <section id="ai-engineering" class="service-detail alt-bg">
             <div class="container">
-                <h2>AI Engineering</h2>
-                <p>Building successful machine learning products requires more than just training a model. Our AI engineering service follows a structured lifecycle: we start with <em>problem exploration</em> to understand your objectives, data sources and success metrics. Next we perform <em>data engineering</em>, designing pipelines to collect, clean and merge data from multiple sources. During <em>model engineering</em>, we select appropriate algorithms, train and evaluate them using held‑out data, then tune parameters for optimal performance. Finally, we handle <em>ML Ops</em>: deploying the model, monitoring its performance and retraining when needed.</p>
-                <p>Our team has experience with Python, scikit‑learn, PyTorch, and modern deep learning frameworks. We build scalable APIs around your models using FastAPI and deploy them in Docker containers or serverless environments. We can also integrate your models into n8n workflows to automate predictions and decision making.</p>
+                <h2 data-i18n="services.ai.title">AI Engineering</h2>
+                <p data-i18n="services.ai.text1">Building successful machine learning products requires more than just training a model. Our AI engineering service follows a structured lifecycle: we start with <em>problem exploration</em> to understand your objectives, data sources and success metrics. Next we perform <em>data engineering</em>, designing pipelines to collect, clean and merge data from multiple sources. During <em>model engineering</em>, we select appropriate algorithms, train and evaluate them using held‑out data, then tune parameters for optimal performance. Finally, we handle <em>ML Ops</em>: deploying the model, monitoring its performance and retraining when needed.</p>
+                <p data-i18n="services.ai.text2">Our team has experience with Python, scikit‑learn, PyTorch, and modern deep learning frameworks. We build scalable APIs around your models using FastAPI and deploy them in Docker containers or serverless environments. We can also integrate your models into n8n workflows to automate predictions and decision making.</p>
                 <ul class="feature-list">
-                    <li><strong>Problem exploration:</strong><span> Define the business problem and evaluate available data.</span></li>
-                    <li><strong>Data pipelines:</strong><span> Collect, clean and merge data from heterogeneous sources.</span></li>
-                    <li><strong>Model development:</strong><span> Train, test and tune models iteratively.</span></li>
-                    <li><strong>ML Ops:</strong><span> Deploy models, monitor performance and manage retraining.</span></li>
-                    <li><strong>Integration:</strong><span> Expose models via APIs or embed them into automated workflows.</span></li>
+                    <li data-i18n="services.ai.feature1"><strong>Problem exploration:</strong><span> Define the business problem and evaluate available data.</span></li>
+                    <li data-i18n="services.ai.feature2"><strong>Data pipelines:</strong><span> Collect, clean and merge data from heterogeneous sources.</span></li>
+                    <li data-i18n="services.ai.feature3"><strong>Model development:</strong><span> Train, test and tune models iteratively.</span></li>
+                    <li data-i18n="services.ai.feature4"><strong>ML Ops:</strong><span> Deploy models, monitor performance and manage retraining.</span></li>
+                    <li data-i18n="services.ai.feature5"><strong>Integration:</strong><span> Expose models via APIs or embed them into automated workflows.</span></li>
                 </ul>
             </div>
         </section>
@@ -74,14 +81,14 @@
         <!-- Consulting & Integration -->
         <section id="consulting" class="service-detail">
             <div class="container">
-                <h2>Consulting &amp; Integration</h2>
-                <p>Not sure where to begin? Our consulting service helps you identify high‑impact automation and AI opportunities. We advise on system architecture, data strategy and integration patterns so that your solutions are robust and maintainable. Leveraging responsive design best practices such as mobile‑first layout, fluid grids and flexible images, we create user‑friendly web interfaces for your automation dashboards. We also implement accessibility guidelines — including adequate contrast ratios and keyboard navigation — to ensure your tools are usable by everyone.</p>
-                <p>From bridging legacy systems with modern APIs to setting up scalable cloud infrastructure, we integrate your automation and AI workflows seamlessly into your existing stack. We can help you self‑host n8n, configure secure deployments and manage environment promotions, or deploy your AI models with Docker and Kubernetes. Together we’ll build a future‑proof platform that grows with your business.</p>
+                <h2 data-i18n="services.consult.title">Consulting &amp; Integration</h2>
+                <p data-i18n="services.consult.text1">Not sure where to begin? Our consulting service helps you identify high‑impact automation and AI opportunities. We advise on system architecture, data strategy and integration patterns so that your solutions are robust and maintainable. Leveraging responsive design best practices such as mobile‑first layout, fluid grids and flexible images, we create user‑friendly web interfaces for your automation dashboards. We also implement accessibility guidelines — including adequate contrast ratios and keyboard navigation — to ensure your tools are usable by everyone.</p>
+                <p data-i18n="services.consult.text2">From bridging legacy systems with modern APIs to setting up scalable cloud infrastructure, we integrate your automation and AI workflows seamlessly into your existing stack. We can help you self‑host n8n, configure secure deployments and manage environment promotions, or deploy your AI models with Docker and Kubernetes. Together we’ll build a future‑proof platform that grows with your business.</p>
                 <ul class="feature-list">
-                    <li><strong>Strategic planning:</strong><span> Identify opportunities for automation and AI adoption.</span></li>
-                    <li><strong>Architecture &amp; integration:</strong><span> Design scalable solutions that connect your systems.</span></li>
-                    <li><strong>User experience:</strong><span> Build responsive, accessible interfaces using mobile‑first and fluid design principles.</span></li>
-                    <li><strong>Deployment:</strong><span> Assist with self‑hosting, cloud deployments and CI/CD pipelines.</span></li>
+                    <li data-i18n="services.consult.feature1"><strong>Strategic planning:</strong><span> Identify opportunities for automation and AI adoption.</span></li>
+                    <li data-i18n="services.consult.feature2"><strong>Architecture &amp; integration:</strong><span> Design scalable solutions that connect your systems.</span></li>
+                    <li data-i18n="services.consult.feature3"><strong>User experience:</strong><span> Build responsive, accessible interfaces using mobile‑first and fluid design principles.</span></li>
+                    <li data-i18n="services.consult.feature4"><strong>Deployment:</strong><span> Assist with self‑hosting, cloud deployments and CI/CD pipelines.</span></li>
                 </ul>
             </div>
         </section>
@@ -89,16 +96,18 @@
 
     <footer>
         <div class="container footer-container">
-            <p>&copy; 2025 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
+            <p data-i18n="footer.rights">&copy; 2025 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
             <ul class="footer-nav">
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html" class="active" data-i18n="nav.services">Services</a></li>
+                <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <!-- Internationalisation script -->
+    <script src="translations.js"></script>
 </body>
 </html>

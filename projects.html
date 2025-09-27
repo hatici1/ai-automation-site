@@ -16,11 +16,18 @@
             <div class="logo">AI Solutions</div>
             <nav>
                 <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="projects.html" class="active" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    <li class="lang-selector">
+                        <select id="language-selector" aria-label="Select language">
+                            <option value="en">EN</option>
+                            <option value="de">DE</option>
+                            <option value="tr">TR</option>
+                        </select>
+                    </li>
                 </ul>
                 <div id="hamburger" class="hamburger">
                     <span></span>
@@ -34,38 +41,38 @@
     <main>
         <section class="page-hero">
             <div class="container">
-                <h1>Featured Projects</h1>
-                <p>Examples of how automation and AI can transform your business processes.</p>
+                <h1 data-i18n="projects.pageHeading">Featured Projects</h1>
+                <p data-i18n="projects.pageSubtitle">Examples of how automation and AI can transform your business processes.</p>
             </div>
         </section>
 
         <section class="projects-list">
             <div class="container">
                 <div class="project-card">
-                    <h2>Lead Capture &amp; Nurturing Automation</h2>
-                    <p>We built a custom workflow that automatically captures leads from multiple marketing channels, enriches their data using API integrations, and sends personalised follow‑up emails via an AI‑powered email generator. The workflow triggers on new form submissions, performs deduplication and data validation, and pushes qualified leads into the client’s CRM.</p>
+                    <h2 data-i18n="projects.lead.title">Lead Capture &amp; Nurturing Automation</h2>
+                    <p data-i18n="projects.lead.desc">We built a custom workflow that automatically captures leads from multiple marketing channels, enriches their data using API integrations, and sends personalised follow‑up emails via an AI‑powered email generator. The workflow triggers on new form submissions, performs deduplication and data validation, and pushes qualified leads into the client’s CRM.</p>
                     <ul class="feature-list">
-                        <li>Multi‑channel lead capture &amp; enrichment.</li>
-                        <li>Automated email generation using language models.</li>
-                        <li>CRM integration and contact scoring.</li>
+                        <li data-i18n="projects.lead.feature1">Multi‑channel lead capture &amp; enrichment.</li>
+                        <li data-i18n="projects.lead.feature2">Automated email generation using language models.</li>
+                        <li data-i18n="projects.lead.feature3">CRM integration and contact scoring.</li>
                     </ul>
                 </div>
                 <div class="project-card">
-                    <h2>AI Chatbot with Knowledge Base</h2>
-                    <p>An AI agent built with n8n’s AI nodes that answers customer questions by searching a private knowledge base. The bot uses embeddings and semantic search to find relevant documents, summarises the content and replies conversationally. A fallback integration with human support ensures unresolved queries are escalated.</p>
+                    <h2 data-i18n="projects.chatbot.title">AI Chatbot with Knowledge Base</h2>
+                    <p data-i18n="projects.chatbot.desc">An AI agent built with n8n’s AI nodes that answers customer questions by searching a private knowledge base. The bot uses embeddings and semantic search to find relevant documents, summarises the content and replies conversationally. A fallback integration with human support ensures unresolved queries are escalated.</p>
                     <ul class="feature-list">
-                        <li>Integrates LLMs via n8n AI nodes.</li>
-                        <li>Semantic search on custom document collections.</li>
-                        <li>Human‑in‑the‑loop escalation when necessary.</li>
+                        <li data-i18n="projects.chatbot.feature1">Integrates LLMs via n8n AI nodes.</li>
+                        <li data-i18n="projects.chatbot.feature2">Semantic search on custom document collections.</li>
+                        <li data-i18n="projects.chatbot.feature3">Human‑in‑the‑loop escalation when necessary.</li>
                     </ul>
                 </div>
                 <div class="project-card">
-                    <h2>Predictive Analytics Platform</h2>
-                    <p>A bespoke machine learning model that forecasts customer churn for a subscription business. We engineered data pipelines to combine transactional, behavioural and demographic data. After training and tuning the model, we exposed it as a REST API using FastAPI and integrated it into the client’s dashboard.</p>
+                    <h2 data-i18n="projects.analytics.title">Predictive Analytics Platform</h2>
+                    <p data-i18n="projects.analytics.desc">A bespoke machine learning model that forecasts customer churn for a subscription business. We engineered data pipelines to combine transactional, behavioural and demographic data. After training and tuning the model, we exposed it as a REST API using FastAPI and integrated it into the client’s dashboard.</p>
                     <ul class="feature-list">
-                        <li>End‑to‑end ML workflow from data engineering to deployment.</li>
-                        <li>API built with FastAPI and Dockerised for scalability.</li>
-                        <li>Dashboard integration for real‑time predictions.</li>
+                        <li data-i18n="projects.analytics.feature1">End‑to‑end ML workflow from data engineering to deployment.</li>
+                        <li data-i18n="projects.analytics.feature2">API built with FastAPI and Dockerised for scalability.</li>
+                        <li data-i18n="projects.analytics.feature3">Dashboard integration for real‑time predictions.</li>
                     </ul>
                 </div>
             </div>
@@ -74,16 +81,18 @@
 
     <footer>
         <div class="container footer-container">
-            <p>&copy; 2025 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
+            <p data-i18n="footer.rights">&copy; 2025 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
             <ul class="footer-nav">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="projects.html" class="active" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <!-- Internationalisation script -->
+    <script src="translations.js"></script>
 </body>
 </html>

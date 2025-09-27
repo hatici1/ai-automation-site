@@ -17,11 +17,19 @@
             <div class="logo">AI Solutions</div>
             <nav id="navbar">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <!-- Insert language selector as a nav item -->
+                    <li class="lang-selector">
+                        <select id="language-selector" aria-label="Select language">
+                            <option value="en">EN</option>
+                            <option value="de">DE</option>
+                            <option value="tr">TR</option>
+                        </select>
+                    </li>
                 </ul>
                 <!-- Hamburger for mobile -->
                 <div id="hamburger" class="hamburger">
@@ -38,34 +46,37 @@
         <div class="hero-overlay"></div>
         <img src="images/hero.png" alt="AI Chip" class="hero-image">
         <div class="hero-content container">
-            <h1>AI Automation &amp; Engineering</h1>
-            <p>Automate. Innovate. Accelerate. Harness AI and engineering to build the future of your business.</p>
-            <a href="contact.html" class="btn primary-btn">Get Started</a>
+            <h1 data-i18n="hero.title">AI Automation &amp; Engineering</h1>
+            <p data-i18n="hero.subtitle">Automate. Innovate. Accelerate. Harness AI and engineering to build the future of your business.</p>
+            <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" class="btn primary-btn" target="_blank" rel="noopener" data-i18n="hero.cta">Book a Call</a>
         </div>
     </section>
 
-    <!-- Services Overview -->
+    <!-- Solutions Overview -->
     <section class="services-overview">
         <div class="container">
-            <h2 class="section-title">What We Offer</h2>
+            <h2 class="section-title" data-i18n="solutions.sectionTitle">Solutions for Your Business</h2>
             <div class="services-grid">
+                <!-- Lead Capture & Nurturing -->
                 <div class="service-card">
-                    <i class="fa-solid fa-network-wired"></i>
-                    <h3>n8n Automations</h3>
-                    <p>Build powerful workflows that automate repetitive tasks, connect APIs and streamline your business processes using n8n.</p>
-                    <a href="services.html#n8n" class="btn secondary-btn">Learn More</a>
+                    <i class="fa-solid fa-user-plus"></i>
+                    <h3 data-i18n="solutions.lead.title">Lead Capture &amp; Nurturing</h3>
+                    <p data-i18n="solutions.lead.desc">Automate the capture and qualification of leads from your website, send personalised follow‑ups and grow your pipeline.</p>
+                    <a href="projects.html#lead-capture" class="btn secondary-btn" data-i18n="solutions.lead.button">Learn More</a>
                 </div>
+                <!-- AI Chatbots -->
                 <div class="service-card">
-                    <i class="fa-solid fa-brain"></i>
-                    <h3>AI Engineering</h3>
-                    <p>Design and deploy custom machine learning models, from data preparation to serving via APIs or in your own infrastructure.</p>
-                    <a href="services.html#ai-engineering" class="btn secondary-btn">Learn More</a>
+                    <i class="fa-solid fa-robot"></i>
+                    <h3 data-i18n="solutions.chatbot.title">AI Chatbots</h3>
+                    <p data-i18n="solutions.chatbot.desc">Deploy chatbots with knowledge bases that answer customer questions 24/7 and free up your team for complex tasks.</p>
+                    <a href="projects.html#chatbot" class="btn secondary-btn" data-i18n="solutions.chatbot.button">Learn More</a>
                 </div>
+                <!-- Predictive Analytics -->
                 <div class="service-card">
-                    <i class="fa-solid fa-handshake"></i>
-                    <h3>Consulting &amp; Integration</h3>
-                    <p>Receive expert guidance on architecture, scalability, and best practices for integrating AI and automation into your existing systems.</p>
-                    <a href="services.html#consulting" class="btn secondary-btn">Learn More</a>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3 data-i18n="solutions.analytics.title">Predictive Analytics</h3>
+                    <p data-i18n="solutions.analytics.desc">Forecast trends and customer behaviour with custom machine learning models to make data‑driven decisions.</p>
+                    <a href="projects.html#analytics" class="btn secondary-btn" data-i18n="solutions.analytics.button">Learn More</a>
                 </div>
             </div>
         </div>
@@ -74,24 +85,26 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container cta-container">
-            <h2>Ready to transform your workflow?</h2>
-            <p>Contact us to discover how automation and AI can unlock new opportunities for your business.</p>
-            <a href="contact.html" class="btn primary-btn">Contact Us</a>
+            <h2 data-i18n="cta.heading">Ready to transform your workflow?</h2>
+            <p data-i18n="cta.text">Contact us to discover how automation and AI can unlock new opportunities for your business.</p>
+            <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" class="btn primary-btn" target="_blank" rel="noopener" data-i18n="cta.button">Book a Call</a>
         </div>
     </section>
 
     <footer>
         <div class="container footer-container">
-            <p>&copy; 2025 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
+            <p data-i18n="footer.rights">&copy; 2025 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
             <ul class="footer-nav">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
             </ul>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <!-- Internationalisation script -->
+    <script src="translations.js"></script>
 </body>
 </html>

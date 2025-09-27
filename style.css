@@ -84,6 +84,31 @@ nav {
     position: relative;
 }
 
+/* Language Selector */
+/* When placed inside the nav list, rely on the flexbox gap rather than a fixed margin */
+.nav-list .lang-selector {
+    margin-left: 0;
+}
+
+.lang-selector select {
+    background-color: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.lang-selector select:hover,
+.lang-selector select:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 191, 166, 0.4);
+}
+
 .nav-list {
     display: flex;
     list-style: none;
@@ -470,6 +495,37 @@ nav {
     color: var(--color-secondary);
 }
 
+/* New contact info section without a form */
+.contact-info-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* Actions container for email and schedule buttons */
+.contact-info-section .contact-actions {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Contact details alignment within the info section */
+.contact-info-section .contact-details {
+    margin-top: 2rem;
+    color: var(--color-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info-section .contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 
 .cta-container h2 {
     font-size: 2rem;
@@ -522,10 +578,11 @@ footer {
     .nav-list {
         position: absolute;
         top: 100%;
+        left: 0;
         right: 0;
         background-color: var(--color-primary);
         flex-direction: column;
-        width: 200px;
+        width: 100%;
         max-height: 0;
         overflow: hidden;
         transition: max-height var(--transition-speed) ease-in-out;

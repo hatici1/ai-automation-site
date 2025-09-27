@@ -6,15 +6,16 @@ The design is intentionally futuristic: headings use the **Orbitron** typeface a
 
 ## Structure
 
-The site consists of several HTML pages and a shared stylesheet:
+The site consists of several HTML pages, a shared stylesheet and scripts:
 
-- `index.html` – Home page with hero section and overview of services.
+- `index.html` – Home page with hero section and a **Solutions** overview highlighting specific outcomes such as lead capture & nurturing, AI chatbots and predictive analytics.
 - `services.html` – Detailed descriptions of available services (n8n automations, AI engineering, consulting & integration).
 - `projects.html` – Examples of previous work to demonstrate capabilities.
 - `about.html` – Mission statement and background information about the business.
-- `contact.html` – Contact form and details.
-- `style.css` – Global styles with responsive breakpoints and accessible color palette.
-- `script.js` – Small script to toggle mobile navigation.
+    - `contact.html` – Contact information page. Includes buttons to email directly and schedule a call via Cal.com; no form is submitted on the page.
+- `style.css` – Global styles with responsive breakpoints, accessible color palette and futuristic design touches.
+- `script.js` – Script to toggle the mobile navigation menu.
+- `translations.js` – Client‑side internationalisation system supporting English, German and Turkish.
 - `images/hero.png` – Hero image generated specifically for this site.
 
 ## Viewing locally
@@ -58,6 +59,15 @@ Because the site is static, you can host it on any web server (e.g., Nginx, Apac
 ## Customization
 
 You can customize the content by editing the HTML files. To change colors or typography, update the CSS variables in `style.css`. The hero image (`images/hero.png`) can be replaced with another image; ensure it has an appropriate aspect ratio and update the `<img>` tag in `index.html` accordingly.
+
+### Scheduling appointments with Cal.com
+
+The site encourages visitors to schedule a 30‑minute call via your Cal.com booking page. You can update your booking link in multiple places:
+
+1. **Hero & CTA buttons:** The hero section and call‑to‑action section on the home page link directly to your Cal.com booking page. If you change your Cal.com URL, update the `href` attributes in `index.html` accordingly.
+2. **Contact page:** The contact page includes a prominent “Schedule a Call” button and a separate email button. Edit the `href` values in `contact.html` to point to your Cal.com event and update the translation strings in `translations.js` if needed.
+
+There is no longer a traditional contact form on the site. Instead, the contact page provides clear options to email you directly via `mailto:` or schedule a call via Cal.com. If you later decide to automate form submissions, you can reintroduce a form and configure a webhook or serverless function to handle the data securely.
 
 ## License
 
