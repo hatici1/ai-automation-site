@@ -24,8 +24,8 @@ const translations = {
     'nav.contact': 'Contact',
 
     // Hero (index)
-    'hero.title': 'AI Automation & Engineering',
-    'hero.subtitle': 'Automate. Innovate. Accelerate. Harness AI and engineering to build the future of your business.',
+    'hero.title': 'AI, Automation & Salesforce',
+    'hero.subtitle': 'Automate. Innovate. Elevate. We specialise in AI engineering, no‑code automation and Salesforce development to build the future of your business.',
     'hero.cta': 'Book a Call',
 
     // Services overview (index)
@@ -54,7 +54,7 @@ const translations = {
     'about.mission.title': 'Our Mission',
     'about.mission.text': 'We believe that small and medium‑sized businesses should have access to the same sophisticated automation and AI tools as large enterprises. Our mission is to democratise technology by building workflows and intelligent systems that are affordable, transparent and easy to use. Through a combination of visual automation tools like n8n and modern machine learning techniques, we help organisations streamline operations, gain insights and create new value.',
     'about.who.title': 'Who We Are',
-    'about.who.text': 'Founded by <strong>Hasan Atici</strong>, an automation enthusiast and AI engineer, AI Solutions grew out of a passion for connecting systems and making technology work for people. With a background in software development, data science and business process optimisation, Hasan has spent years helping clients across industries automate repetitive tasks and build intelligent products. As part of an ongoing journey to master n8n and AI engineering, he documents his learning, shares knowledge and builds a portfolio of open‑source projects. We take pride in being transparent about our methods and delivering solutions that fit your needs.',
+    'about.who.text': 'Founded by <strong>Hasan Atici</strong>, an automation enthusiast and AI engineer, AI Solutions grew out of a passion for connecting systems and making technology work for people. He is joined by his sister, a skilled Salesforce developer, and together they help clients across industries automate repetitive tasks, build intelligent products and create custom CRM solutions. With backgrounds in software development, data science and business process optimisation, they document their learning, share knowledge and deliver solutions that fit your needs.',
     'about.approach.title': 'Our Approach',
     'about.approach.text': 'We follow best practices in responsive design, accessibility and user experience. By taking a mobile‑first approach, using fluid grids and flexible images, and ensuring adequate contrast and keyboard navigation, we build web interfaces that are friendly on any device. In our AI projects we adhere to a structured machine learning process involving problem exploration, data engineering, model engineering and ML Ops. This helps us deliver reliable, maintainable solutions.',
     'about.contact.title': 'Get In Touch',
@@ -83,15 +83,15 @@ const translations = {
 
     // Solutions overview (index)
     'solutions.sectionTitle': 'Solutions for Your Business',
-    'solutions.lead.title': 'Lead Capture & Nurturing',
-    'solutions.lead.desc': 'Automate the capture and qualification of leads from your website, send personalised follow‑ups and grow your pipeline.',
-    'solutions.lead.button': 'Learn More',
-    'solutions.chatbot.title': 'AI Chatbots',
-    'solutions.chatbot.desc': 'Deploy chatbots with knowledge bases that answer customer questions 24/7 and free up your team for complex tasks.',
-    'solutions.chatbot.button': 'Learn More',
-    'solutions.analytics.title': 'Predictive Analytics',
-    'solutions.analytics.desc': 'Forecast trends and customer behaviour with custom machine learning models to make data‑driven decisions.',
-    'solutions.analytics.button': 'Learn More',
+    'solutions.automation.title': 'Workflow Automation',
+    'solutions.automation.desc': 'Capture and qualify leads, orchestrate marketing campaigns and sync data across your tools using no‑code workflows.',
+    'solutions.automation.button': 'Learn More',
+    'solutions.ai.title': 'AI Engineering & Chatbots',
+    'solutions.ai.desc': 'Develop custom machine learning models and conversational agents that understand, predict and engage your customers.',
+    'solutions.ai.button': 'Learn More',
+    'solutions.salesforce.title': 'Salesforce Development',
+    'solutions.salesforce.desc': 'Design bespoke Salesforce apps, automations and integrations to get more value from your CRM.',
+    'solutions.salesforce.button': 'Learn More',
 
     // Services page
     'services.pageHeading': 'Our Services',
@@ -122,6 +122,15 @@ const translations = {
     'services.consult.feature2': '<strong>Architecture & integration:</strong><span> Design scalable solutions that connect your systems.</span>',
     'services.consult.feature3': '<strong>User experience:</strong><span> Build responsive, accessible interfaces using mobile‑first and fluid design principles.</span>',
     'services.consult.feature4': '<strong>Deployment:</strong><span> Assist with self‑hosting, cloud deployments and CI/CD pipelines.</span>',
+
+    // Salesforce service
+    'services.salesforce.title': 'Salesforce Development & CRM Integration',
+    'services.salesforce.text1': 'Salesforce is the world’s leading CRM platform, but unlocking its full power requires custom development and thoughtful integration. We design and build custom Salesforce apps, objects and page layouts tailored to your business processes. Our expertise covers Apex programming, Lightning Web Components and Flow automations, ensuring your CRM adapts to your workflows—not the other way around.',
+    'services.salesforce.text2': 'We also integrate Salesforce with your existing systems. Whether you need real‑time data sync with marketing tools, custom webhooks to external services or complex ETL pipelines, we implement robust REST and SOAP integrations. By combining Salesforce’s built‑in features with external automations, we deliver a seamless experience for your sales, marketing and support teams.',
+    'services.salesforce.feature1': '<strong>Custom development:</strong><span> Build custom objects, fields and user interfaces using Apex and Lightning.</span>',
+    'services.salesforce.feature2': '<strong>Process automation:</strong><span> Create flows and process builders to automate leads, approvals and notifications.</span>',
+    'services.salesforce.feature3': '<strong>CRM integration:</strong><span> Connect Salesforce with external databases and applications via REST/SOAP APIs.</span>',
+    'services.salesforce.feature4': '<strong>User training:</strong><span> Empower your team with tailored training and documentation.</span>',
 
     // Projects page
     'projects.pageHeading': 'Featured Projects',
@@ -154,8 +163,8 @@ const translations = {
     'nav.contact': 'Kontakt',
 
     // Hero (index)
-    'hero.title': 'KI‑Automatisierung & Engineering',
-    'hero.subtitle': 'Automatisieren. Innovieren. Beschleunigen. Nutzen Sie KI und Technik, um die Zukunft Ihres Unternehmens zu gestalten.',
+    'hero.title': 'KI, Automatisierung & Salesforce',
+    'hero.subtitle': 'Automatisieren. Innovieren. Elevieren. Wir sind spezialisiert auf KI‑Engineering, No‑Code‑Automatisierung und Salesforce‑Entwicklung, um die Zukunft Ihres Unternehmens zu gestalten.',
     'hero.cta': 'Termin vereinbaren',
 
     // Services overview (index)
@@ -169,6 +178,18 @@ const translations = {
     'service.consult.title': 'Beratung & Integration',
     'service.consult.desc': 'Erhalten Sie fachkundige Beratung zu Architektur, Skalierbarkeit und Best Practices zur Integration von KI und Automatisierung in Ihre bestehenden Systeme.',
     'service.consult.button': 'Mehr erfahren',
+
+    // Updated solutions overview (index)
+    'solutions.sectionTitle': 'Lösungen für Ihr Unternehmen',
+    'solutions.automation.title': 'Workflow‑Automatisierung',
+    'solutions.automation.desc': 'Erfassen und qualifizieren Sie Leads, orchestrieren Sie Marketingkampagnen und synchronisieren Sie Daten über Ihre Tools mit No‑Code‑Workflows.',
+    'solutions.automation.button': 'Mehr erfahren',
+    'solutions.ai.title': 'KI‑Engineering & Chatbots',
+    'solutions.ai.desc': 'Entwickeln Sie maßgeschneiderte Machine‑Learning‑Modelle und Konversationsassistenten, die Ihre Kunden verstehen, vorhersagen und einbinden.',
+    'solutions.ai.button': 'Mehr erfahren',
+    'solutions.salesforce.title': 'Salesforce‑Entwicklung',
+    'solutions.salesforce.desc': 'Entwerfen Sie maßgeschneiderte Salesforce‑Apps, Automatisierungen und Integrationen, um mehr aus Ihrem CRM herauszuholen.',
+    'solutions.salesforce.button': 'Mehr erfahren',
 
     // Call‑to‑action
     'cta.heading': 'Bereit, Ihre Abläufe zu transformieren?',
@@ -184,7 +205,7 @@ const translations = {
     'about.mission.title': 'Unsere Mission',
     'about.mission.text': 'Wir sind der Überzeugung, dass kleine und mittelständische Unternehmen Zugang zu denselben hochentwickelten Automatisierungs‑ und KI‑Werkzeugen wie große Konzerne haben sollten. Unsere Mission ist es, Technologie zu demokratisieren, indem wir Workflows und intelligente Systeme entwickeln, die erschwinglich, transparent und einfach zu bedienen sind. Durch eine Kombination aus visuellen Automatisierungstools wie n8n und modernen Machine‑Learning‑Techniken helfen wir Organisationen, Abläufe zu optimieren, Erkenntnisse zu gewinnen und neuen Mehrwert zu schaffen.',
     'about.who.title': 'Wer wir sind',
-    'about.who.text': 'AI Solutions wurde von <strong>Hasan Atici</strong>, einem Automatisierungsenthusiasten und KI‑Ingenieur, gegründet und entstand aus einer Leidenschaft dafür, Systeme zu verbinden und Technologie für Menschen nutzbar zu machen. Mit einem Hintergrund in Softwareentwicklung, Data Science und Geschäftsprozessoptimierung hat Hasan jahrelang Kunden in verschiedensten Branchen dabei geholfen, repetitive Aufgaben zu automatisieren und intelligente Produkte zu entwickeln. Als Teil seiner fortlaufenden Reise zur Beherrschung von n8n und KI‑Engineering dokumentiert er seine Lernfortschritte, teilt Wissen und baut ein Portfolio an Open‑Source‑Projekten auf. Wir legen Wert auf Transparenz bei unseren Methoden und liefern Lösungen, die Ihren Bedürfnissen entsprechen.',
+    'about.who.text': 'AI Solutions wurde von <strong>Hasan Atici</strong>, einem Automatisierungsenthusiasten und KI‑Ingenieur, gegründet. Gemeinsam mit seiner Schwester, einer versierten Salesforce‑Entwicklerin, entstand das Unternehmen aus der Leidenschaft, Systeme zu verbinden und Technologie für Menschen nutzbar zu machen. Mit Hintergründen in Softwareentwicklung, Data Science und Geschäftsprozessoptimierung helfen sie Kunden in verschiedenen Branchen, repetitive Aufgaben zu automatisieren, intelligente Produkte zu entwickeln und maßgeschneiderte CRM‑Lösungen zu schaffen. Sie teilen ihre Lernerfahrungen und liefern transparente Lösungen, die Ihren Bedürfnissen entsprechen.',
     'about.approach.title': 'Unser Ansatz',
     'about.approach.text': 'Wir folgen Best Practices in Bezug auf responsives Design, Barrierefreiheit und Benutzererlebnis. Durch einen Mobile‑First‑Ansatz, flüssige Raster und flexible Bilder sowie ausreichende Kontrastverhältnisse und Tastaturnavigation bauen wir Weboberflächen, die auf jedem Gerät nutzerfreundlich sind. In unseren KI‑Projekten halten wir uns an einen strukturierten Machine‑Learning‑Prozess bestehend aus Problemanalyse, Datenengineering, Modellentwicklung und ML‑Ops. So liefern wir zuverlässige und wartbare Lösungen.',
     'about.contact.title': 'Kontakt aufnehmen',
@@ -249,6 +270,15 @@ const translations = {
     'services.consult.feature3': '<strong>Benutzererlebnis:</strong><span> Erstellen Sie responsive, barrierefreie Oberflächen unter Verwendung von Mobile‑First‑ und fluiden Designprinzipien.</span>',
     'services.consult.feature4': '<strong>Deployment:</strong><span> Unterstützung beim Self‑Hosting, Cloud‑Deployments und CI/CD‑Pipelines.</span>',
 
+    // Salesforce service
+    'services.salesforce.title': 'Salesforce‑Entwicklung & CRM‑Integration',
+    'services.salesforce.text1': 'Salesforce ist die führende CRM‑Plattform der Welt, doch ihr volles Potenzial entfaltet sich nur durch maßgeschneiderte Entwicklung und durchdachte Integration. Wir entwerfen und entwickeln benutzerdefinierte Salesforce‑Apps, Objekte und Seitenlayouts, die auf Ihre Geschäftsprozesse zugeschnitten sind. Unsere Expertise umfasst Apex‑Programmierung, Lightning‑Web‑Components und Flow‑Automatisierungen – so passt sich Ihr CRM Ihren Workflows an, nicht umgekehrt.',
+    'services.salesforce.text2': 'Wir integrieren Salesforce auch in Ihre bestehenden Systeme. Ob Sie eine Echtzeit‑Datensynchronisierung mit Marketing‑Tools, benutzerdefinierte Webhooks für externe Dienste oder komplexe ETL‑Pipelines benötigen – wir implementieren robuste REST‑ und SOAP‑Integrationen. Durch die Kombination der in Salesforce integrierten Funktionen mit externen Automatisierungen bieten wir Ihren Vertriebs‑, Marketing‑ und Support‑Teams ein nahtloses Erlebnis.',
+    'services.salesforce.feature1': '<strong>Maßgeschneiderte Entwicklung:</strong><span> Erstellen Sie benutzerdefinierte Objekte, Felder und Benutzeroberflächen mit Apex und Lightning.</span>',
+    'services.salesforce.feature2': '<strong>Prozessautomatisierung:</strong><span> Erstellen Sie Flows und Prozess‑Builder, um Leads, Genehmigungen und Benachrichtigungen zu automatisieren.</span>',
+    'services.salesforce.feature3': '<strong>CRM‑Integration:</strong><span> Verbinden Sie Salesforce über REST‑/SOAP‑APIs mit externen Datenbanken und Anwendungen.</span>',
+    'services.salesforce.feature4': '<strong>Benutzerschulung:</strong><span> Stärken Sie Ihr Team mit individuell zugeschnittener Schulung und Dokumentation.</span>',
+
     // Projects page
     'projects.pageHeading': 'Ausgewählte Projekte',
     'projects.pageSubtitle': 'Beispiele dafür, wie Automatisierung und KI Ihre Geschäftsprozesse transformieren können.',
@@ -277,8 +307,8 @@ const translations = {
     'nav.contact': 'İletişim',
 
     // Hero (index)
-    'hero.title': 'Yapay Zeka Otomasyonu ve Mühendislik',
-    'hero.subtitle': 'Otomatize Edin. Yenilik Yapın. Hızlanın. İşinizin geleceğini inşa etmek için Yapay Zeka ve mühendisliği kullanın.',
+    'hero.title': 'Yapay Zekâ, Otomasyon & Salesforce',
+    'hero.subtitle': 'Otomatize et. Yenilik yap. Yükselt. Yapay zekâ mühendisliği, kodsuz otomasyon ve Salesforce geliştirme konusundaki uzmanlığımızla işletmenizin geleceğini inşa ediyoruz.',
     'hero.cta': 'Görüşme Planlayın',
 
     // Services overview (index)
@@ -307,7 +337,7 @@ const translations = {
     'about.mission.title': 'Misyonumuz',
     'about.mission.text': 'Biz küçük ve orta ölçekli işletmelerin de büyük şirketler kadar gelişmiş otomasyon ve yapay zeka araçlarına erişebilmesi gerektiğine inanıyoruz. Misyonumuz, n8n gibi görsel otomasyon araçları ve modern makine öğrenimi teknikleri ile uygun maliyetli, şeffaf ve kullanımı kolay iş akışları ve akıllı sistemler oluşturarak teknolojiyi demokratikleştirmektir. Bu sayede organizasyonların operasyonları kolaylaştırmasına, içgörüler elde etmesine ve yeni değerler yaratmasına yardımcı oluyoruz.',
     'about.who.title': 'Biz Kimiz',
-    'about.who.text': 'AI Solutions, sistemleri birbirine bağlama ve teknolojiyi insanlar için çalıştırma tutkusundan doğan otomasyon meraklısı ve yapay zeka mühendisi <strong>Hasan Atici</strong> tarafından kuruldu. Yazılım geliştirme, veri bilimi ve iş süreci optimizasyonu geçmişine sahip olan Hasan, yıllar boyunca farklı sektörlerdeki müşterilerin tekrar eden görevleri otomatikleştirmelerine ve akıllı ürünler geliştirmelerine yardımcı oldu. n8n ve AI mühendisliğini ustalıkla öğrenme yolculuğunun bir parçası olarak öğrenimlerini belgeliyor, bilgiyi paylaşıyor ve açık kaynak projelerden oluşan bir portföy oluşturuyor. Yöntemlerimizde şeffaflıkla gurur duyuyor ve ihtiyaçlarınıza uygun çözümler sunuyoruz.',
+    'about.who.text': 'AI Solutions, sistemleri birbirine bağlama ve teknolojiyi insanlar için çalıştırma tutkusundan doğan otomasyon meraklısı ve yapay zekâ mühendisi <strong>Hasan Atici</strong> tarafından kuruldu. Kendisine Salesforce geliştiricisi olan kız kardeşi katılıyor; birlikte müşterilerin yinelenen görevlerini otomatikleştirmelerine, akıllı ürünler geliştirmelerine ve özel CRM çözümleri oluşturmalarına yardımcı oluyorlar. Yazılım geliştirme, veri bilimi ve iş süreci optimizasyonu geçmişleriyle öğrendiklerini belgeleyip bilgi paylaşıyor ve ihtiyaçlarınıza uygun çözümler sunuyorlar.',
     'about.approach.title': 'Yaklaşımımız',
     'about.approach.text': 'Mobil öncelikli yaklaşım, akıcı ızgaralar ve esnek görseller kullanarak, yeterli kontrast ve klavye navigasyonu sağlayarak, tüm cihazlarda kullanıcı dostu web arayüzleri oluşturmak için duyarlı tasarım, erişilebilirlik ve kullanıcı deneyiminde en iyi uygulamaları takip ediyoruz. AI projelerimizde, problem keşfi, veri mühendisliği, model mühendisliği ve ML Ops’tan oluşan yapılandırılmış bir makine öğrenimi sürecine bağlı kalıyoruz. Bu, güvenilir ve sürdürülebilir çözümler sunmamıza yardımcı olur.',
     'about.contact.title': 'Bizimle İletişime Geçin',
@@ -335,15 +365,15 @@ const translations = {
 
     // Solutions overview (index)
     'solutions.sectionTitle': 'İşiniz İçin Çözümler',
-    'solutions.lead.title': 'Lead Toplama & Yetiştirme',
-    'solutions.lead.desc': 'Web sitenizden lead toplama ve nitelendirme süreçlerini otomatikleştirin, kişiselleştirilmiş takipler gönderin ve satış huninizi büyütün.',
-    'solutions.lead.button': 'Daha Fazla Bilgi',
-    'solutions.chatbot.title': 'Yapay Zeka Sohbet Botları',
-    'solutions.chatbot.desc': 'Bilgi tabanlı sohbet botlarıyla müşterilerinize 7/24 hizmet verin, ekibinizin daha karmaşık görevlere odaklanmasını sağlayın.',
-    'solutions.chatbot.button': 'Daha Fazla Bilgi',
-    'solutions.analytics.title': 'Öngörüsel Analitik',
-    'solutions.analytics.desc': 'Özelleştirilmiş makine öğrenmesi modelleriyle trendleri ve müşteri davranışlarını tahmin edin, veri odaklı kararlar alın.',
-    'solutions.analytics.button': 'Daha Fazla Bilgi',
+    'solutions.automation.title': 'İş Akışı Otomasyonu',
+    'solutions.automation.desc': 'No‑code iş akışlarıyla web sitenizden lead yakalayın, pazarlama kampanyalarınızı yönetin ve araçlarınız arasında veri senkronize edin.',
+    'solutions.automation.button': 'Daha Fazla',
+    'solutions.ai.title': 'Yapay Zekâ Mühendisliği & Chatbotlar',
+    'solutions.ai.desc': 'Müşterilerinizi anlayan, tahmin eden ve onlarla etkileşime geçen özel makine öğrenimi modelleri ve sohbet botları geliştirin.',
+    'solutions.ai.button': 'Daha Fazla',
+    'solutions.salesforce.title': 'Salesforce Geliştirme',
+    'solutions.salesforce.desc': 'CRM’nizden daha fazla fayda sağlamak için özel Salesforce uygulamaları, otomasyonlar ve entegrasyonlar tasarlayın.',
+    'solutions.salesforce.button': 'Daha Fazla',
 
     // Services page
     'services.pageHeading': 'Hizmetlerimiz',
@@ -371,6 +401,15 @@ const translations = {
     'services.consult.feature2': '<strong>Mimari ve entegrasyon:</strong><span> Sistemlerinizi birbirine bağlayan ölçeklenebilir çözümler tasarlayın.</span>',
     'services.consult.feature3': '<strong>Kullanıcı deneyimi:</strong><span> Mobil öncelikli ve akışkan tasarım ilkelerini kullanarak duyarlı, erişilebilir arayüzler oluşturun.</span>',
     'services.consult.feature4': '<strong>Dağıtım:</strong><span> Kendi kendine barındırma, bulut dağıtımları ve CI/CD hatlarında yardımcı olur.</span>',
+
+    // Salesforce service
+    'services.salesforce.title': 'Salesforce Geliştirme & CRM Entegrasyonu',
+    'services.salesforce.text1': 'Salesforce dünyanın lider CRM platformudur; ancak tüm gücünden yararlanmak için özel geliştirme ve doğru entegrasyon gerekir. İş süreçlerinize uygun özel Salesforce uygulamaları, nesneler ve sayfa düzenleri tasarlar ve geliştiririz. Uzmanlığımız Apex programlama, Lightning Web Components ve Flow otomasyonlarını kapsar; böylece CRM’iniz iş akışlarınıza uyum sağlar, tersi değil.',
+    'services.salesforce.text2': 'Ayrıca Salesforce’u mevcut sistemlerinizle entegre ediyoruz. Pazarlama araçlarıyla gerçek zamanlı veri senkronizasyonu, harici servislere özel webhooks veya karmaşık ETL hatları ne gerekiyorsa — sağlam REST ve SOAP entegrasyonları uygularız. Salesforce’un yerleşik özelliklerini harici otomasyonlarla birleştirerek satış, pazarlama ve destek ekipleriniz için sorunsuz bir deneyim sunarız.',
+    'services.salesforce.feature1': '<strong>Özel geliştirme:</strong><span> Apex ve Lightning kullanarak özel nesneler, alanlar ve kullanıcı arayüzleri oluşturun.</span>',
+    'services.salesforce.feature2': '<strong>Süreç otomasyonu:</strong><span> Lead’leri, onayları ve bildirimleri otomatikleştirmek için Flow’lar ve Process Builder’lar oluşturun.</span>',
+    'services.salesforce.feature3': '<strong>CRM entegrasyonu:</strong><span> Salesforce’u REST/SOAP API’ler üzerinden harici veritabanları ve uygulamalarla bağlayın.</span>',
+    'services.salesforce.feature4': '<strong>Kullanıcı eğitimi:</strong><span> Ekibinizi özel eğitim ve dokümantasyon ile güçlendirin.</span>',
 
     // Projects page
     'projects.pageHeading': 'Öne Çıkan Projeler',

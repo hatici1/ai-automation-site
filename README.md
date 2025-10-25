@@ -8,8 +8,8 @@ The design is intentionally futuristic: headings use the **Orbitron** typeface a
 
 The site consists of several HTML pages, a shared stylesheet and scripts:
 
-- `index.html` – Home page with hero section and a **Solutions** overview highlighting specific outcomes such as lead capture & nurturing, AI chatbots and predictive analytics.
-- `services.html` – Detailed descriptions of available services (n8n automations, AI engineering, consulting & integration).
+- `index.html` – Home page with a hero section and a **Solutions** overview highlighting key outcomes such as workflow automation, AI engineering & chatbots, and Salesforce development.
+- `services.html` – Detailed descriptions of available services (n8n automations, AI engineering, Salesforce development & CRM integration, consulting & integration).
 - `projects.html` – Examples of previous work to demonstrate capabilities.
 - `about.html` – Mission statement and background information about the business.
     - `contact.html` – Contact information page. It now uses client‑side obfuscation to hide your email from crawlers and provides buttons to email you directly or schedule a call via Cal.com.
