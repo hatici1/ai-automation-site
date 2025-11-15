@@ -672,4 +672,52 @@ footer {
 .digital-card-details a:hover {
     text-decoration: underline;
     color: var(--color-secondary);
+
+
+/* Packages section */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
+
+.package-card {
+  background-color: #112240;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(240, 165, 0, 0.4);
+}
+
+.package-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--color-light);
+  font-family: var(--font-family-heading);
+}
+
+.package-tagline {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+}
+
+.package-card p {
+  margin-bottom: 0.75rem;
+  color: var(--color-muted);
+}
+
+.package-price {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+}
+
