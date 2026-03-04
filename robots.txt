@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow digital card from indexing (not a core SEO page)
+Disallow: /digital-card.html
+
+Sitemap: https://ai-automation-site-nu.vercel.app/sitemap.xml

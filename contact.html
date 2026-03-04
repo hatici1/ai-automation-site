@@ -4,7 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contact – AI Automation &amp; Engineering Solutions</title>
+    <title>Contact – Book a Free AI Automation Consultation | Köln, Germany</title>
+    <meta name="description" content="Book a free 30-minute consultation with Hasan Atici to discuss your automation and AI needs. Based in Köln, serving businesses across Europe.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ai-automation-site-nu.vercel.app/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI Automation &amp; Engineering Solutions">
+    <meta property="og:title" content="Contact – Book a Free AI Automation Consultation | Köln, Germany">
+    <meta property="og:description" content="Book a free 30-minute consultation with Hasan Atici to discuss your automation and AI needs. Based in Köln, serving businesses across Europe.">
+    <meta property="og:url" content="https://ai-automation-site-nu.vercel.app/contact.html">
+    <meta property="og:image" content="https://ai-automation-site-nu.vercel.app/images/hero.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact – Book a Free AI Automation Consultation | Köln, Germany">
+    <meta name="twitter:description" content="Book a free 30-minute consultation with Hasan Atici to discuss your automation and AI needs. Based in Köln, serving businesses across Europe.">
+    <meta name="twitter:image" content="https://ai-automation-site-nu.vercel.app/images/hero.png">
+
+    <!-- Schema.org: ContactPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ai-automation-site-nu.vercel.app/index.html"},
+            {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://ai-automation-site-nu.vercel.app/contact.html"}
+          ]
+        },
+        {
+          "@type": "ContactPage",
+          "url": "https://ai-automation-site-nu.vercel.app/contact.html",
+          "name": "Contact AI Automation & Engineering Solutions",
+          "description": "Book a free 30-minute consultation with Hasan Atici to discuss your automation and AI needs.",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "AI Automation & Engineering Solutions",
+            "email": "hasanm.atici@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Köln",
+              "addressCountry": "DE"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "email": "hasanm.atici@gmail.com",
+              "availableLanguage": ["English", "German", "Turkish"]
+            }
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google Fonts for futuristic typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -29,7 +88,7 @@
                         </select>
                     </li>
                 </ul>
-                <div id="hamburger" class="hamburger">
+                <div id="hamburger" class="hamburger" aria-label="Toggle navigation" role="button" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -39,25 +98,37 @@
     </header>
 
     <main>
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li aria-current="page">Contact</li>
+                </ol>
+            </div>
+        </nav>
+
         <section class="page-hero">
             <div class="container">
                 <h1 data-i18n="contact.pageHeading">Contact Us</h1>
-                <p data-i18n="contact.pageSubtitle">Let’s discuss how automation and AI can benefit your business. Reach out via email or schedule a call.</p>
+                <p data-i18n="contact.pageSubtitle">Let's discuss how automation and AI can benefit your business. Reach out via email or schedule a call.</p>
             </div>
         </section>
 
         <section class="contact-info-section">
             <div class="container">
                 <h2 data-i18n="contact.details.heading">Contact Information</h2>
-                <p data-i18n="contact.description">We’d love to hear from you. Get in touch via email or schedule a call.</p>
+                <p data-i18n="contact.description">We'd love to hear from you. Get in touch via email or schedule a call.</p>
                 <div class="contact-actions">
                     <!-- The email button will be populated via JavaScript to protect the address from harvesters -->
                     <a id="email-button" href="#" class="btn secondary-btn" data-i18n="contact.emailButton">Email Us</a>
                     <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" class="btn primary-btn" target="_blank" rel="noopener" data-i18n="contact.scheduleButton">Schedule a Call</a>
                 </div>
                 <div class="contact-details">
-                    <p><i class="fa-solid fa-envelope"></i> <span data-i18n="contact.details.email">Email</span> <span id="email-link"></span></p>
-                    <p><i class="fa-solid fa-location-dot"></i> <span data-i18n="contact.details.location">Köln, Germany (Europe/Berlin)</span></p>
+                    <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <span data-i18n="contact.details.email">Email</span> <span id="email-link"></span></p>
+                    <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span data-i18n="contact.details.location">Köln, Germany (Europe/Berlin)</span></p>
+                    <p><i class="fa-solid fa-globe" aria-hidden="true"></i> <span>Serving clients across Europe &amp; DACH region</span></p>
+                    <p><i class="fa-solid fa-language" aria-hidden="true"></i> <span>English · Deutsch · Türkçe</span></p>
                 </div>
             </div>
         </section>
@@ -66,15 +137,16 @@
         <section class="schedule-section">
             <div class="container">
                 <h2 data-i18n="schedule.heading">Schedule a Call</h2>
-                <p data-i18n="schedule.text">Book a free 30‑minute consultation via our calendar. We’ll discuss your needs and outline a plan tailored for you.</p>
-                <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" class="btn primary-btn" target="_blank" rel="noopener" data-i18n="schedule.button">Book Now</a>
+                <p data-i18n="schedule.text">Book a free 30‑minute consultation via our calendar. We'll discuss your needs and outline a plan tailored for you.</p>
+                <p class="schedule-note">No commitment required. No sales pressure. Just an honest conversation about what's possible.</p>
+                <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" class="btn primary-btn" target="_blank" rel="noopener" data-i18n="schedule.button">Book Now — It's Free</a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container footer-container">
-            <p>&copy; 2025 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
+            <p>&copy; 2026 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
             <ul class="footer-nav">
                 <li><a href="services.html">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
