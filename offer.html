@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- noindex: personalised offer pages should not appear in search -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>Your Personal AI Agent Offer | AI Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yEMJL0VZ4Pp9SQaFvudCs2O5mEPDUYLu+wuO0FJw2bqdJOXwudCbp6tsvNCD6LtFxrIeqZoUKwOUZF0etQXw6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="offer-body">
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">AI Solutions</div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="platform.html" class="nav-platform" data-i18n="nav.platform">Platform</a></li>
+                    <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    <li class="lang-selector">
+                        <select id="language-selector" aria-label="Select language">
+                            <option value="en">EN</option>
+                            <option value="de">DE</option>
+                            <option value="tr">TR</option>
+                        </select>
+                    </li>
+                </ul>
+                <div id="hamburger" class="hamburger" aria-label="Toggle navigation" role="button" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- INVALID / MISSING PARAMS -->
+        <div id="offer-invalid" class="offer-invalid-state" hidden>
+            <div class="container" style="text-align:center;padding:5rem 1rem;">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size:3rem;color:var(--color-accent);margin-bottom:1rem;" aria-hidden="true"></i>
+                <h1 style="color:var(--color-light);">This link looks incomplete</h1>
+                <p style="color:var(--color-muted);max-width:480px;margin:0 auto 2rem;">
+                    Personalised offer links are sent directly by the AI Solutions team.
+                    Please check your email or <a href="contact.html" style="color:var(--color-secondary);">contact us</a> and we'll resend yours.
+                </p>
+                <a href="platform.html" class="btn secondary-btn">← Back to Platform</a>
+            </div>
+        </div>
+
+        <!-- OFFER CONTENT (shown by JS) -->
+        <div id="offer-content" hidden>
+
+            <!-- ── HERO ── -->
+            <section class="po-hero">
+                <div class="container">
+                    <div class="po-for-badge">
+                        Personal offer for <strong id="po-name-badge">you</strong>
+                        <span id="po-company-badge" class="po-company-sep"></span>
+                    </div>
+                    <div class="po-agent-icon-wrap">
+                        <div class="po-agent-icon" id="po-icon"></div>
+                    </div>
+                    <h1 id="po-heading" class="po-heading"></h1>
+                    <p id="po-tagline" class="po-tagline"></p>
+                    <div class="po-validity">
+                        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                        This offer is valid for <strong>7 days</strong> from when it was sent to you.
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── DEMO ── -->
+            <section class="po-demo-section">
+                <div class="container">
+                    <h2 class="po-section-title">See it in action</h2>
+                    <!--
+                        DEMO PLACEHOLDER
+                        Replace the div below with a real Loom embed, GIF, or screenshot per agent.
+                        Example Loom embed:
+                        <div class="po-video-wrap">
+                          <iframe src="https://www.loom.com/embed/YOUR_LOOM_ID" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    -->
+                    <div class="po-demo-placeholder" id="po-demo">
+                        <div class="po-demo-inner">
+                            <i class="fa-solid fa-play-circle" aria-hidden="true"></i>
+                            <p id="po-demo-label">Demo coming soon — we'll walk through this live on our call.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── WHAT'S INCLUDED ── -->
+            <section class="po-scope-section">
+                <div class="container">
+                    <h2 class="po-section-title">What's included</h2>
+                    <ul class="po-scope-list" id="po-scope-list"></ul>
+                </div>
+            </section>
+
+            <!-- ── PRICING ── -->
+            <section class="po-pricing-section">
+                <div class="container">
+                    <h2 class="po-section-title">Your price</h2>
+                    <div class="po-price-card">
+                        <div class="po-price-left">
+                            <div class="po-plan-name" id="po-plan-name"></div>
+                            <div class="po-price-amount" id="po-price-amount"></div>
+                            <div class="po-price-note">Billed monthly · Cancel anytime · 14-day free trial</div>
+                        </div>
+                        <div class="po-price-right">
+                            <ul class="po-price-features" id="po-plan-features"></ul>
+                        </div>
+                    </div>
+                    <div class="po-discount-note" id="po-discount-note" hidden></div>
+                </div>
+            </section>
+
+            <!-- ── CTA ── -->
+            <section class="po-cta-section">
+                <div class="container po-cta-inner">
+                    <div class="po-cta-text">
+                        <h2>Ready to get started?</h2>
+                        <p>Start your free 14-day trial now. No credit card required. We'll handle the full setup and be live within 3 business days.</p>
+                    </div>
+                    <div class="po-cta-buttons">
+                        <!-- Primary: Cal.com booking (replace with Stripe link once payments are live) -->
+                        <a id="po-cta-primary" href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" target="_blank" rel="noopener" class="btn primary-btn po-cta-main">
+                            <i class="fa-solid fa-rocket" aria-hidden="true"></i> Accept &amp; Start Free Trial
+                        </a>
+                        <a href="contact.html" class="btn secondary-btn">Questions first →</a>
+                    </div>
+                    <p class="po-cta-guarantee">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        GDPR-safe · EU infrastructure · Cancel before day 14 and pay nothing
+                    </p>
+                </div>
+            </section>
+
+        </div><!-- /#offer-content -->
+
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <p>&copy; 2026 AI Automation &amp; Engineering Solutions. All rights reserved.</p>
+            <ul class="footer-nav">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="platform.html" class="nav-platform">Platform</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="translations.js"></script>
+    <script>
+    /**
+     * Personalised Offer Page
+     *
+     * URL parameters:
+     *   agent    — inbox | sales | edi | readiness
+     *   name     — lead's first name or full name    (optional, defaults to "you")
+     *   company  — lead's company name               (optional)
+     *   plan     — starter | growth | scale          (optional, defaults to starter)
+     *   discount — e.g. "20" for 20% off             (optional)
+     *   ref      — reference / tracking code         (optional)
+     *
+     * Example URL:
+     *   offer.html?agent=inbox&name=Max&company=Mustermann+GmbH&plan=starter&discount=15&ref=CALL-001
+     *
+     * To automate link generation via n8n:
+     *   1. Add an n8n HTTP Request node after your Formspree webhook triggers.
+     *   2. Build the URL with the lead's name, company and agent_interest field.
+     *   3. Use an n8n Send Email node to deliver the personalised link.
+     */
+    (function () {
+
+      var AGENTS = {
+        inbox: {
+          icon: '<i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>',
+          heading: 'Inbox Agent',
+          tagline: 'Your inbox, handled intelligently — 24/7.',
+          demoLabel: 'Inbox Agent demo — watch how emails get classified and replied to automatically.',
+          scope: [
+            'Email classification by intent: sales inquiry, support, invoice, spam',
+            'AI draft replies in your tone and preferred language',
+            'One-click send — you stay in full control',
+            'Automatic CRM logging of every interaction',
+            'Human escalation routing for complex threads',
+            'Hosted, monitored and updated by us',
+            '<strong>Estimated saving: ~8 hours/week</strong>'
+          ]
+        },
+        sales: {
+          icon: '<i class="fa-solid fa-chart-line" aria-hidden="true"></i>',
+          heading: 'Sales Assistant Agent',
+          tagline: 'Your pipeline — always warm. Always moving.',
+          demoLabel: 'Sales Assistant demo — see how stale deals get flagged and follow-ups written automatically.',
+          scope: [
+            'Stale deal detection based on your custom threshold',
+            'Personalised follow-up email drafts per opportunity',
+            'Call note summarisation → automatic CRM logging',
+            'Next-step task creation so nothing slips through',
+            'Works with Salesforce, HubSpot, Pipedrive and more',
+            'Hosted, monitored and updated by us',
+            '<strong>Estimated saving: ~6 hours/week per sales rep</strong>'
+          ]
+        },
+        edi: {
+          icon: '<i class="fa-solid fa-file-code" aria-hidden="true"></i>',
+          heading: 'XML/EDI Monitor Agent',
+          tagline: 'Silent watchdog for your file exchange — instant alert on every error.',
+          demoLabel: 'XML/EDI Monitor demo — see SFTP polling, EDIFACT parsing and ERP push in real time.',
+          scope: [
+            'FTP/SFTP polling on your schedule (every 5 min or event-triggered)',
+            'Schema validation for EDIFACT, X12, UBL or custom XML',
+            'AI anomaly detection: duplicate orders, quantity outliers, missing fields',
+            'Automatic ERP / CRM push via REST API — zero manual entry',
+            'Instant Slack or email alert with exact error and file location',
+            'File archiving and audit log after successful processing',
+            'Hosted, monitored and updated by us',
+            '<strong>Eliminates hours of manual checking daily</strong>'
+          ]
+        },
+        readiness: {
+          icon: '<i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>',
+          heading: 'AI Readiness Agent',
+          tagline: 'Know exactly where AI fits in your business — scored, ranked, actionable.',
+          demoLabel: 'AI Readiness Agent demo — see the questionnaire, scoring and sample action plan output.',
+          scope: [
+            'Guided 20–30 question audit (takes ~15 minutes)',
+            '5-dimension readiness score: Data, Process, People, Technology, Strategy',
+            'Prioritised list of automation/AI use cases ranked by ROI and effort',
+            '12-page PDF action plan with tool recommendations and budget ranges',
+            '30-minute walkthrough call to review your results',
+            'Delivered within 5 business days',
+            '<strong>Replaces a €5,000 consulting engagement</strong>'
+          ]
+        }
+      };
+
+      var PLANS = {
+        starter: {
+          name: 'Starter',
+          price: '€99',
+          period: '/month',
+          features: ['1 AI agent', 'Hosted & managed', 'Email support', 'Monthly usage report']
+        },
+        growth: {
+          name: 'Growth',
+          price: '€249',
+          period: '/month',
+          features: ['Up to 3 AI agents', 'Hosted & managed', 'Priority support (24h)', 'Monthly report + insights', '2 custom logic changes/month']
+        },
+        scale: {
+          name: 'Scale',
+          price: '€499',
+          period: '/month',
+          features: ['All 4 agents', 'Hosted & managed', 'Same-day priority support', 'Monthly optimisation call', 'Unlimited custom logic changes']
+        }
+      };
+
+      // Parse params
+      var params   = new URLSearchParams(window.location.search);
+      var agentKey = (params.get('agent') || '').toLowerCase();
+      var planKey  = (params.get('plan')  || 'starter').toLowerCase();
+      var name     = params.get('name')     || '';
+      var company  = params.get('company')  || '';
+      var discount = parseInt(params.get('discount') || '0', 10);
+
+      var agentData = AGENTS[agentKey];
+      var planData  = PLANS[planKey] || PLANS.starter;
+
+      if (!agentData) {
+        document.getElementById('offer-invalid').hidden = false;
+        return;
+      }
+
+      // Reveal content
+      document.getElementById('offer-content').hidden = false;
+
+      // Update page title
+      document.title = agentData.heading + (name ? ' for ' + name : '') + ' | AI Solutions';
+
+      // For badge
+      document.getElementById('po-name-badge').textContent = name || 'you';
+      var companyBadge = document.getElementById('po-company-badge');
+      if (company) {
+        companyBadge.textContent = ' at ' + company;
+        companyBadge.style.display = 'inline';
+      }
+
+      // Icon, heading, tagline
+      document.getElementById('po-icon').innerHTML = agentData.icon;
+      document.getElementById('po-heading').textContent = agentData.heading;
+      document.getElementById('po-tagline').textContent = agentData.tagline;
+      document.getElementById('po-demo-label').textContent = agentData.demoLabel;
+
+      // Scope list
+      var scopeList = document.getElementById('po-scope-list');
+      agentData.scope.forEach(function (item) {
+        var li = document.createElement('li');
+        li.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i><span>' + item + '</span>';
+        scopeList.appendChild(li);
+      });
+
+      // Pricing
+      document.getElementById('po-plan-name').textContent = planData.name + ' Plan';
+
+      var basePrice = parseInt(planData.price.replace('€', ''), 10);
+      var finalPrice = discount > 0 ? Math.round(basePrice * (1 - discount / 100)) : basePrice;
+      var priceEl = document.getElementById('po-price-amount');
+
+      if (discount > 0) {
+        priceEl.innerHTML =
+          '<span class="po-price-strike">€' + basePrice + '</span>' +
+          ' <span class="po-price-discounted">€' + finalPrice + '</span>' +
+          '<span class="po-price-period">' + planData.period + '</span>';
+
+        var discEl = document.getElementById('po-discount-note');
+        discEl.innerHTML =
+          '<i class="fa-solid fa-tag" aria-hidden="true"></i> ' +
+          discount + '% personal discount applied — locked in for your first 12 months.';
+        discEl.hidden = false;
+      } else {
+        priceEl.innerHTML = planData.price + '<span class="po-price-period">' + planData.period + '</span>';
+      }
+
+      var planFeatures = document.getElementById('po-plan-features');
+      planData.features.forEach(function (f) {
+        var li = document.createElement('li');
+        li.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i>' + f;
+        planFeatures.appendChild(li);
+      });
+
+      // CTA primary button — personalise if needed
+      // When Stripe is set up, replace the href with a Stripe Payment Link per plan.
+      // Example: data-stripe-starter="https://buy.stripe.com/xxx"
+      // var cta = document.getElementById('po-cta-primary');
+      // cta.href = 'https://buy.stripe.com/xxx';
+
+    })();
+    </script>
+</body>
+</html>
