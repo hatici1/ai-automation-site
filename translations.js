@@ -19,6 +19,7 @@ const translations = {
     // Navigation
     'nav.home': 'Home',
     'nav.services': 'Services',
+    'nav.platform': 'Platform',
     'nav.projects': 'Projects',
     'nav.about': 'About',
     'nav.contact': 'Contact',
@@ -46,7 +47,7 @@ const translations = {
     'cta.button': 'Book a Call',
 
     // Footer
-    'footer.rights': '© 2025 AI Automation & Engineering Solutions. All rights reserved.',
+    'footer.rights': '© 2026 AI Automation & Engineering Solutions. All rights reserved.',
 
     // About page
     'about.pageHeading': 'About Us',
@@ -158,14 +159,15 @@ const translations = {
     // Navigation
     'nav.home': 'Startseite',
     'nav.services': 'Dienstleistungen',
+    'nav.platform': 'Plattform',
     'nav.projects': 'Projekte',
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
 
     // Hero (index)
-    'hero.title': 'KI, Automatisierung & Salesforce',
-    'hero.subtitle': 'Automatisieren. Innovieren. Elevieren. Wir sind spezialisiert auf KI‑Engineering, No‑Code‑Automatisierung und Salesforce‑Entwicklung, um die Zukunft Ihres Unternehmens zu gestalten.',
-    'hero.cta': 'Termin vereinbaren',
+    'hero.title': 'KI‑Automatisierung, Beratung & Engineering',
+    'hero.subtitle': 'Von KI‑Strategie und Beratung bis zu praktischer Automatisierung, Chatbots, XML/EDI‑Pipelines und Salesforce — wir decken den gesamten Stack der intelligenten Unternehmenstransformation ab.',
+    'hero.cta': 'Kostenlos beraten lassen',
 
     // Services overview (index)
     'service.sectionTitle': 'Was wir anbieten',
@@ -197,7 +199,13 @@ const translations = {
     'cta.button': 'Termin vereinbaren',
 
     // Footer
-    'footer.rights': '© 2025 AI Automatisierung & Engineering Solutions. Alle Rechte vorbehalten.',
+    'footer.rights': '© 2026 AI Automatisierung & Engineering Solutions. Alle Rechte vorbehalten.',
+
+    // New services (DE)
+    'services.counseling.title': 'KI‑Beratung & Strategie',
+    'services.xmledi.title': 'XML / EDI & FTP‑Integration',
+    'services.chatbots.title': 'KI‑Chatbots & RAG‑Systeme',
+    'nav.platform': 'Plattform',
 
     // About page
     'about.pageHeading': 'Über Uns',
@@ -302,6 +310,7 @@ const translations = {
     // Navigation
     'nav.home': 'Ana Sayfa',
     'nav.services': 'Hizmetler',
+    'nav.platform': 'Platform',
     'nav.projects': 'Projeler',
     'nav.about': 'Hakkımızda',
     'nav.contact': 'İletişim',
@@ -329,7 +338,7 @@ const translations = {
     'cta.button': 'Görüşme Planlayın',
 
     // Footer
-    'footer.rights': '© 2025 AI Otomasyon & Mühendislik Çözümleri. Tüm hakları saklıdır.',
+    'footer.rights': '© 2026 AI Otomasyon & Mühendislik Çözümleri. Tüm hakları saklıdır.',
 
     // About page
     'about.pageHeading': 'Hakkımızda',

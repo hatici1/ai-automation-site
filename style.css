@@ -1260,3 +1260,391 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ================================================================
+   NAV PLATFORM LINK — highlight in teal pill
+   ================================================================ */
+.nav-platform {
+  color: var(--color-secondary) !important;
+  border: 1px solid rgba(0, 191, 166, 0.4) !important;
+  border-radius: 20px !important;
+  padding: 0.25rem 0.75rem !important;
+  font-size: 0.85rem;
+  transition: background-color var(--transition-speed), color var(--transition-speed) !important;
+}
+
+.nav-platform:hover,
+.nav-platform.active {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+  border-color: var(--color-secondary) !important;
+}
+
+/* ================================================================
+   PLATFORM PAGE HERO
+   ================================================================ */
+.platform-page-hero {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(160deg, #05111e 0%, #0a192f 50%, #091e38 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.platform-page-hero::before {
+  content: '';
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(0,191,166,0.07) 0%, transparent 65%);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.platform-page-hero h1 {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--color-light);
+  margin-bottom: 1.25rem;
+  line-height: 1.15;
+}
+
+.platform-hero-sub {
+  color: var(--color-secondary);
+}
+
+.platform-hero-desc {
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.platform-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.platform-hero-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.platform-hero-note i {
+  color: var(--color-secondary);
+  margin-right: 0.2rem;
+}
+
+/* ================================================================
+   PLATFORM AGENTS SECTION (full-detail cards)
+   ================================================================ */
+.platform-agents-section {
+  padding: 5rem 0;
+  background-color: var(--color-primary);
+}
+
+.platform-agent-full-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.platform-agent-card {
+  background-color: #112240;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 191, 166, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.platform-agent-card:hover {
+  border-color: rgba(0, 191, 166, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 191, 166, 0.1);
+}
+
+.platform-agent-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.platform-agent-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(0,191,166,0.15), rgba(240,165,0,0.1));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.platform-agent-icon i {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+}
+
+.platform-agent-header h3 {
+  font-family: var(--font-family-heading);
+  font-size: 1.2rem;
+  color: var(--color-light);
+  margin-bottom: 0.3rem;
+}
+
+.platform-agent-tagline {
+  font-style: italic;
+  color: var(--color-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.platform-agent-card p:not(.platform-agent-tagline) {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.platform-agent-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.platform-agent-saves {
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.platform-agent-saves i {
+  margin-right: 0.3rem;
+}
+
+/* ================================================================
+   HOW IT WORKS
+   ================================================================ */
+.how-it-works {
+  padding: 5rem 0;
+  background-color: #0f2540;
+}
+
+.how-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  counter-reset: steps;
+}
+
+.how-step {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.how-step-number {
+  font-family: var(--font-family-heading);
+  font-size: 2.5rem;
+  color: rgba(0, 191, 166, 0.25);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.how-step h3 {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  color: var(--color-light);
+  margin-bottom: 0.5rem;
+}
+
+.how-step p {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ================================================================
+   PRICING SECTION
+   ================================================================ */
+.platform-pricing {
+  padding: 5rem 0;
+  background-color: var(--color-primary);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.pricing-card {
+  background-color: #112240;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+  transition: transform var(--transition-speed), border-color var(--transition-speed);
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 191, 166, 0.3);
+}
+
+.pricing-card--featured {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 30px rgba(0, 191, 166, 0.12);
+}
+
+.pricing-featured-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.pricing-tier {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-price {
+  font-family: var(--font-family-heading);
+  font-size: 2.5rem;
+  color: var(--color-light);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-price span {
+  font-size: 1rem;
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.pricing-desc {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.45rem 0;
+  font-size: 0.9rem;
+  color: var(--color-light);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.pricing-features li i.fa-check {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.pricing-features li i.muted {
+  color: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-note {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+/* ================================================================
+   PROJECT RESULT HIGHLIGHT
+   ================================================================ */
+.project-result {
+  background-color: rgba(0, 191, 166, 0.06);
+  border-left: 3px solid var(--color-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  color: var(--color-light);
+  margin-top: 0.75rem;
+}
+
+.project-result i {
+  color: var(--color-secondary);
+  margin-right: 0.4rem;
+}
+
+/* ================================================================
+   RESPONSIVE FOR PLATFORM PAGE
+   ================================================================ */
+@media (max-width: 768px) {
+  .platform-agent-full-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-steps-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .platform-agent-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
