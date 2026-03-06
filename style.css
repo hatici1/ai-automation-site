@@ -70,6 +70,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* anchor for the mobile dropdown */
 }
 
 .logo {
