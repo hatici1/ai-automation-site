@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { Link } from 'react-router-dom'
 import { ArrowRight, TrendingUp } from 'lucide-react'
 
@@ -26,9 +27,32 @@ const projects = [
     cta: { label: 'Build Something Similar', href: '/contact', ext: false } },
 ]
 
+
+const SCHEMA_PRJ = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  'url': 'https://alp-ai.com/projects',
+  'name': 'AI Automation Case Studies',
+  'description': 'Real-world automation and AI projects for DACH SMBs.',
+  'hasPart': [
+    {'@type':'Article','name':'Lead Capture & Nurturing Automation','keywords':['n8n','lead capture','CRM','LLM']},
+    {'@type':'Article','name':'AI Chatbot with Knowledge Base','keywords':['RAG','chatbot','vector DB']},
+    {'@type':'Article','name':'XML/EDI FTP Pipeline Modernisation','keywords':['XML','EDI','FTP','SFTP','ERP']},
+    {'@type':'Article','name':'AI Counseling & Adoption Roadmap','keywords':['AI counseling','AI strategy','SMB']},
+    {'@type':'Article','name':'Predictive Analytics Platform','keywords':['machine learning','churn prediction','FastAPI','MLOps']},
+  ],
+}
+
 export default function Projects() {
   return (
-    <div style={S.page}>
+    <>
+      <SEO
+        title="Case Studies: AI Automation, n8n, Chatbots & Salesforce Results"
+        description="Real-world automation case studies for DACH SMBs — n8n lead capture, RAG chatbots, XML/EDI pipelines, AI counseling and predictive analytics."
+        canonical="/projects"
+        schema={SCHEMA_PRJ}
+      />
+      <div style={S.page}>
       {/* Hero */}
       <section style={{ padding: '6rem 0 3rem', textAlign: 'center', background: 'radial-gradient(ellipse 70% 40% at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 70%)' }}>
         <div style={S.maxW}>
@@ -99,5 +123,6 @@ export default function Projects() {
         </div>
       </section>
     </div>
+    </>
   )
 }

@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Check, Zap, DollarSign, Globe, Wrench, Briefcase, GitBranch, MessageSquare, FileCode2, Bot, Cloud } from 'lucide-react'
 
@@ -40,9 +41,38 @@ const why = [
   { Icon: Wrench, title: 'Built to last', sub: 'Documented, trained, yours to own.' },
 ]
 
+
+const SCHEMA_HOME = [
+  {
+    '@type': 'Organization',
+    '@id': 'https://alp-ai.com/#organization',
+    'name': 'AI Automation & Engineering Solutions',
+    'url': 'https://alp-ai.com',
+    'founder': { '@type': 'Person', 'name': 'Hasan Atici', 'jobTitle': 'AI Engineer & Automation Specialist' },
+    'contactPoint': { '@type': 'ContactPoint', 'email': 'hasanm.atici@gmail.com', 'contactType': 'customer service', 'areaServed': ['DE','AT','CH','EU'], 'availableLanguage': ['English','German','Turkish'] },
+    'address': { '@type': 'PostalAddress', 'addressLocality': 'Köln', 'addressCountry': 'DE' },
+    'knowsAbout': ['n8n automation','AI engineering','AI counseling','Salesforce development','XML EDI integration','RAG chatbots','machine learning'],
+  },
+  {
+    '@type': 'LocalBusiness',
+    'name': 'AI Automation & Engineering Solutions',
+    'url': 'https://alp-ai.com',
+    'priceRange': '€€',
+    'address': { '@type': 'PostalAddress', 'addressLocality': 'Köln', 'addressCountry': 'DE' },
+    'serviceArea': { '@type': 'AdministrativeArea', 'name': 'DACH region' },
+  },
+]
+
 export default function Home() {
   return (
-    <div style={S.page}>
+    <>
+      <SEO
+        title="AI Automation, n8n & Salesforce Specialist"
+        description="Stop losing time to manual work. Custom n8n automations, AI chatbots, XML/EDI integrations, Salesforce & AI strategy for DACH SMBs. Free 30-min call. Based in Köln."
+        canonical="/"
+        schema={SCHEMA_HOME}
+      />
+      <div style={S.page}>
       {/* ── HERO ── */}
       <section style={{ position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
         {/* Glow orbs */}
@@ -193,5 +223,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   )
 }

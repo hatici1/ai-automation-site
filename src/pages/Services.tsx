@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { Briefcase, GitBranch, MessageSquare, FileCode2, Bot, Cloud, ArrowRight, Check } from 'lucide-react'
@@ -34,6 +35,33 @@ const packages = [
   { title: 'Ongoing Partnership', sub: 'Optimise. Tune. Govern.', price: '€500/mo', desc: 'We maintain and evolve everything we build month after month.' },
 ]
 
+
+const SCHEMA_SVC = [
+  {
+    '@type': 'ItemList',
+    'name': 'AI Automation Services',
+    'itemListElement': [
+      {'@type':'ListItem','position':1,'item':{'@type':'Service','name':'AI Counseling & Strategy','description':'AI readiness audit, adoption roadmap and ROI analysis for DACH SMBs.','areaServed':'EU','offers':{'@type':'Offer','price':'500','priceCurrency':'EUR'}}},
+      {'@type':'ListItem','position':2,'item':{'@type':'Service','name':'n8n Workflow Automation','description':'No-code workflow automation with 400+ integrations.','areaServed':'EU','offers':{'@type':'Offer','price':'1200','priceCurrency':'EUR'}}},
+      {'@type':'ListItem','position':3,'item':{'@type':'Service','name':'AI Chatbots & RAG Systems','description':'Custom conversational AI using your private knowledge base.','areaServed':'EU','offers':{'@type':'Offer','price':'2500','priceCurrency':'EUR'}}},
+      {'@type':'ListItem','position':4,'item':{'@type':'Service','name':'XML / EDI & FTP Integration','description':'Legacy file exchange automation and B2B data pipelines.','areaServed':'EU','offers':{'@type':'Offer','price':'1800','priceCurrency':'EUR'}}},
+      {'@type':'ListItem','position':5,'item':{'@type':'Service','name':'AI Engineering & MLOps','description':'Custom ML models, data pipelines and production API deployment.','areaServed':'EU'}},
+      {'@type':'ListItem','position':6,'item':{'@type':'Service','name':'Salesforce Development','description':'Custom Salesforce apps, Apex, Lightning components and CRM integrations.','areaServed':'EU','offers':{'@type':'Offer','price':'1200','priceCurrency':'EUR'}}},
+    ],
+  },
+  {
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {'@type':'Question','name':'What does an AI counseling session include?','acceptedAnswer':{'@type':'Answer','text':'A structured audit of your workflows, identification of automation opportunities, tool recommendations, a realistic ROI estimate and a prioritised 3–6 month adoption roadmap.'}},
+      {'@type':'Question','name':'How long does it take to build an n8n automation?','acceptedAnswer':{'@type':'Answer','text':'Most standard automations are built and tested within 1–2 weeks. Complex multi-system integrations may take 3–4 weeks.'}},
+      {'@type':'Question','name':'What is the minimum budget to get started?','acceptedAnswer':{'@type':'Answer','text':'An AI Readiness Audit starts from €500. Workflow automation packages start from €1,200. The free 30-minute consultation scopes what you need.'}},
+      {'@type':'Question','name':'Can you integrate legacy FTP-based XML/EDI systems?','acceptedAnswer':{'@type':'Answer','text':'Yes. We specialise in bridging FTP/SFTP servers and XML/EDI file exchange with modern APIs and automation platforms like n8n.'}},
+      {'@type':'Question','name':'Do I need technical knowledge to use the automations you build?','acceptedAnswer':{'@type':'Answer','text':'No. We document every workflow and provide hands-on training so your team can manage automations without coding.'}},
+      {'@type':'Question','name':'Do you work with businesses outside Germany?','acceptedAnswer':{'@type':'Answer','text':'Yes. We work remotely across the DACH region and broader Europe in English, German and Turkish.'}},
+    ],
+  },
+]
+
 export default function Services() {
   const { hash } = useLocation()
   useEffect(() => {
@@ -44,7 +72,14 @@ export default function Services() {
   }, [hash])
 
   return (
-    <div style={S.page}>
+    <>
+      <SEO
+        title="Services: n8n Automation, AI Chatbots, XML/EDI, Salesforce"
+        description="Custom n8n workflows, RAG chatbots, XML/EDI FTP pipelines, AI engineering and Salesforce development for DACH SMBs. Fixed-price packages from €500."
+        canonical="/services"
+        schema={SCHEMA_SVC}
+      />
+      <div style={S.page}>
       {/* Hero */}
       <section style={{ padding: '6rem 0 3rem', textAlign: 'center', background: 'radial-gradient(ellipse 70% 40% at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 70%)' }}>
         <div style={S.maxW}>
@@ -140,5 +175,6 @@ export default function Services() {
         </div>
       </section>
     </div>
+    </>
   )
 }

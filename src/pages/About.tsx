@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { ArrowRight } from 'lucide-react'
 
 const CAL = 'https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min'
@@ -15,9 +16,29 @@ const values = [
   { t: 'Multilingual', s: 'English · Deutsch · Türkçe.' },
 ]
 
+
+const SCHEMA_ABT = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  'name': 'Hasan Atici',
+  'jobTitle': 'AI Engineer & Automation Specialist',
+  'url': 'https://alp-ai.com/about',
+  'worksFor': {'@type':'Organization','name':'AI Automation & Engineering Solutions','url':'https://alp-ai.com'},
+  'address': {'@type':'PostalAddress','addressLocality':'Köln','addressCountry':'DE'},
+  'knowsAbout': ['n8n automation','Salesforce','Python','RAG chatbots','XML EDI','FastAPI','MLOps'],
+  'knowsLanguage': ['English','German','Turkish'],
+}
+
 export default function About() {
   return (
-    <div style={S.page}>
+    <>
+      <SEO
+        title="About — Hasan Atici, AI Engineer & Automation Specialist"
+        description="Hasan Atici — AI automation engineer based in Köln. Specialising in n8n, Salesforce, Python, RAG chatbots and XML/EDI for DACH SMBs."
+        canonical="/about"
+        schema={SCHEMA_ABT}
+      />
+      <div style={S.page}>
       <section style={{ padding: '6rem 0 3rem', textAlign: 'center', background: 'radial-gradient(ellipse 70% 40% at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 70%)' }}>
         <div style={S.maxW}>
           <h1 style={{ fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', letterSpacing: '-0.02em', marginBottom: '0.75rem' }}>About Us</h1>
@@ -89,5 +110,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   )
 }

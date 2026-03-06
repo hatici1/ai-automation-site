@@ -1,3 +1,4 @@
+import SEO from '../components/SEO'
 import { ArrowRight, MapPin, Globe, Languages } from 'lucide-react'
 
 const CAL = 'https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min'
@@ -9,9 +10,31 @@ const S = {
   card: { background: 'rgba(15,15,26,0.8)', border: '1px solid rgba(30,30,53,0.9)', borderRadius: '1rem' } as React.CSSProperties,
 }
 
+
+const SCHEMA_CNT = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  'url': 'https://alp-ai.com/contact',
+  'name': 'Contact AI Automation & Engineering Solutions',
+  'mainEntity': {
+    '@type': 'Organization',
+    'name': 'AI Automation & Engineering Solutions',
+    'email': 'hasanm.atici@gmail.com',
+    'address': {'@type':'PostalAddress','addressLocality':'Köln','addressCountry':'DE'},
+    'contactPoint': {'@type':'ContactPoint','contactType':'customer service','email':'hasanm.atici@gmail.com','availableLanguage':['English','German','Turkish']},
+  },
+}
+
 export default function Contact() {
   return (
-    <div style={S.page}>
+    <>
+      <SEO
+        title="Contact — Book a Free AI Automation Consultation"
+        description="Book a free 30-minute consultation with Hasan Atici. Fixed-price proposal in 48h. Go live in 2 weeks. Based in Köln, serving all of Europe."
+        canonical="/contact"
+        schema={SCHEMA_CNT}
+      />
+      <div style={S.page}>
       <section style={{ padding: '6rem 0 3rem', textAlign: 'center', background: 'radial-gradient(ellipse 70% 40% at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 70%)' }}>
         <div style={S.maxW}>
           <h1 style={{ fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', letterSpacing: '-0.02em', marginBottom: '0.75rem' }}>Let's Talk</h1>
@@ -74,5 +97,6 @@ export default function Contact() {
         </div>
       </section>
     </div>
+    </>
   )
 }
