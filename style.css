@@ -305,7 +305,6 @@ nav {
     background-color: #112240;
     padding: 3rem 0;
     text-align: center;
-    margin-top: 4rem;
 }
 
 .page-hero h1 {
@@ -585,16 +584,62 @@ footer {
         width: 100%;
         max-height: 0;
         overflow: hidden;
-        transition: max-height var(--transition-speed) ease-in-out;
+        transition: max-height 0.4s ease-in-out;
         border: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
     }
 
     .nav-list.open {
-        max-height: 300px;
+        max-height: 520px;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list li a {
+        display: block;
+        padding: 0.85rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        border-left: none;
+    }
+
+    .nav-list li:last-child a {
+        border-bottom: none;
+    }
+
+    /* Platform pill — reset the absolute positioning for inline display in mobile menu */
+    .nav-list .nav-platform {
+        margin: 0.5rem 1.5rem !important;
+        display: inline-block !important;
+        padding: 0.4rem 0.85rem !important;
+    }
+
+    /* Language selector in mobile menu */
+    .nav-list .lang-selector {
+        padding: 0.75rem 1.5rem;
     }
 
     .hamburger {
         display: flex;
+    }
+
+    /* Hamburger → X animation */
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .hamburger span {
+        transition: transform 0.3s ease, opacity 0.2s ease;
     }
 }
 
@@ -2154,4 +2199,181 @@ footer {
   }
 
   .po-cta-buttons { flex-direction: column; align-items: center; }
+}
+
+/* ================================================================
+   GLOBAL MOBILE IMPROVEMENTS  (≤ 768px)
+   ================================================================ */
+@media (max-width: 768px) {
+
+  /* ── Typography scale-down ── */
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  /* ── Section padding ── */
+  .services-overview,
+  .why-us-section,
+  .projects-list,
+  .about-content,
+  .faq-section,
+  .platform-agents-section,
+  .how-it-works,
+  .platform-pricing,
+  .po-demo-section,
+  .po-scope-section,
+  .po-pricing-section,
+  .waitlist-section,
+  .platform-teaser {
+    padding: 3rem 0;
+  }
+
+  .platform-page-hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .po-hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .po-cta-section {
+    padding: 3rem 0;
+  }
+
+  .schedule-section {
+    padding: 3rem 0;
+  }
+
+  /* ── Project cards ── */
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.3rem;
+  }
+
+  /* ── Service cards ── */
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  /* ── Service detail ── */
+  .service-detail {
+    padding: 2.5rem 0;
+  }
+
+  /* ── CTA section ── */
+  .cta-section {
+    padding: 2.5rem 0;
+  }
+
+  .cta-container h2 {
+    font-size: 1.5rem;
+  }
+
+  /* ── Footer nav wrapping ── */
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .footer-container {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  /* ── Platform teaser agent grid ── */
+  .agent-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Pricing grid ── */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Buttons full-width in CTA areas ── */
+  .cta-container .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ── Contact form ── */
+  .contact-form-section {
+    padding: 2.5rem 0;
+  }
+
+  /* ── Waitlist card ── */
+  .waitlist-card {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  /* ── Offer page price amount ── */
+  .po-price-amount {
+    font-size: 2.2rem;
+  }
+
+  /* ── Platform agent card ── */
+  .platform-agent-card {
+    padding: 1.5rem;
+  }
+
+  /* ── How steps ── */
+  .how-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Quicknav wrapping ── */
+  .service-quicknav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quicknav-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0 0.5rem;
+  }
+}
+
+/* ================================================================
+   EXTRA SMALL SCREENS  (≤ 400px)
+   ================================================================ */
+@media (max-width: 400px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    padding: 0.65rem 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  .project-tags {
+    gap: 0.35rem;
+  }
+
+  .project-tag {
+    font-size: 0.72rem;
+  }
+
+  .po-for-badge {
+    font-size: 0.78rem;
+  }
+
+  .waitlist-card {
+    padding: 1.25rem;
+  }
 }
