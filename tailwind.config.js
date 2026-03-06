@@ -4,23 +4,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: {
-          950: '#04090f',
-          900: '#070f1c',
-          800: '#0a1628',
-          700: '#0f2040',
-          600: '#1a3354',
-          500: '#254a78',
-        },
-        gold: {
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
+        dark: {
+          950: '#050508',
+          900: '#0a0a0f',
+          800: '#0f0f1a',
+          700: '#161625',
+          600: '#1e1e35',
+          500: '#26264a',
         },
       },
       fontFamily: {
         display: ['Orbitron', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'glow-sm': '0 0 15px rgba(139,92,246,0.25)',
+        'glow': '0 0 30px rgba(139,92,246,0.35)',
+        'glow-lg': '0 0 60px rgba(139,92,246,0.4)',
+        'glow-btn': '0 0 25px rgba(139,92,246,0.5), 0 4px 15px rgba(0,0,0,0.5)',
+      },
+      backgroundImage: {
+        'hero-glow': 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139,92,246,0.25) 0%, transparent 70%)',
       },
     },
   },

@@ -1,85 +1,72 @@
 import { ArrowRight, MapPin, Globe, Languages } from 'lucide-react'
 
-const CAL_URL = 'https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min'
-// Base64 encoded email to protect from harvesters
+const CAL = 'https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min'
 const EMAIL = atob('aGFzYW5tLmF0aWNpQGdtYWlsLmNvbQ==')
+
+const S = {
+  page: { background: '#0a0a0f', color: 'white', fontFamily: 'Inter, system-ui, sans-serif' } as React.CSSProperties,
+  maxW: { maxWidth: '900px', margin: '0 auto', padding: '0 1.5rem' } as React.CSSProperties,
+  card: { background: 'rgba(15,15,26,0.8)', border: '1px solid rgba(30,30,53,0.9)', borderRadius: '1rem' } as React.CSSProperties,
+}
 
 export default function Contact() {
   return (
-    <div className="pt-16">
-      {/* Page hero */}
-      <section className="py-16 md:py-20 text-center bg-gradient-to-b from-navy-800/60 to-navy-900">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <h1 className="font-display text-3xl sm:text-4xl font-bold mb-3">Let's Talk</h1>
-          <p className="text-slate-400 text-lg">Free 30-min call — no commitment, no sales pressure.</p>
+    <div style={S.page}>
+      <section style={{ padding: '6rem 0 3rem', textAlign: 'center', background: 'radial-gradient(ellipse 70% 40% at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 70%)' }}>
+        <div style={S.maxW}>
+          <h1 style={{ fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', letterSpacing: '-0.02em', marginBottom: '0.75rem' }}>Let's Talk</h1>
+          <p style={{ color: '#94a3b8', fontSize: '1.125rem' }}>Free 30-min call — no commitment, no sales pressure.</p>
         </div>
       </section>
 
-      {/* Main CTA */}
-      <section className="section-pad">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Book a call card */}
-            <div className="card-glass p-8 flex flex-col gap-5 border-gold-500/20">
-              <div className="w-14 h-14 bg-gold-500/10 border border-gold-500/20 rounded-2xl flex items-center justify-center text-2xl">
-                📅
-              </div>
+      <section style={{ padding: '2rem 0 5rem' }}>
+        <div style={S.maxW}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+            {/* Book a call */}
+            <div style={{ ...S.card, padding: '2rem', borderColor: 'rgba(139,92,246,0.25)', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              <div style={{ fontSize: '2rem' }}>📅</div>
               <div>
-                <h2 className="font-display text-xl font-bold text-white mb-1">Book a Free Call</h2>
-                <p className="text-slate-400 text-sm">
-                  Pick a time that works. We'll discuss your biggest manual bottlenecks and map out what's automatable.
-                </p>
+                <h2 style={{ fontWeight: 700, color: 'white', fontSize: '1.25rem', marginBottom: '0.5rem' }}>Book a Free Call</h2>
+                <p style={{ color: '#94a3b8', fontSize: '0.875rem', lineHeight: 1.6 }}>Pick a time that works. We'll discuss your biggest manual bottlenecks and map out what's automatable.</p>
               </div>
-              <ul className="space-y-2 text-sm text-slate-300">
-                <li className="flex items-center gap-2"><span className="text-gold-400">✓</span> 30 minutes, completely free</li>
-                <li className="flex items-center gap-2"><span className="text-gold-400">✓</span> No commitment required</li>
-                <li className="flex items-center gap-2"><span className="text-gold-400">✓</span> Clear action plan you can use immediately</li>
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+                {['30 minutes, completely free','No commitment required','Clear action plan you can use immediately'].map(t => (
+                  <li key={t} style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', color: '#cbd5e1', fontSize: '0.875rem' }}>
+                    <span style={{ color: '#a78bfa', fontWeight: 700 }}>✓</span>{t}
+                  </li>
+                ))}
               </ul>
-              <a
-                href={CAL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-xl transition-all shadow-lg shadow-gold-500/20"
-              >
-                Book Now — It's Free <ArrowRight size={18} />
+              <a href={CAL} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: '0.9375rem' }}>
+                Book Now — It's Free <ArrowRight size={16} />
               </a>
             </div>
 
-            {/* Email + details */}
-            <div className="flex flex-col gap-5">
-              {/* Email card */}
-              <div className="card-glass p-6 flex flex-col gap-3">
-                <div className="w-12 h-12 bg-navy-600/60 rounded-xl flex items-center justify-center text-xl">
-                  ✉️
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white mb-1">Send an Email</h3>
-                  <p className="text-slate-400 text-sm mb-3">Prefer async? Drop us a line anytime.</p>
-                  <a
-                    href={`mailto:${EMAIL}`}
-                    className="text-gold-400 hover:text-gold-300 font-medium text-sm transition-colors break-all"
-                  >
-                    {EMAIL}
-                  </a>
-                </div>
+            {/* Right col */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {/* Email */}
+              <div style={{ ...S.card, padding: '1.5rem' }}>
+                <div style={{ fontSize: '1.5rem', marginBottom: '0.75rem' }}>✉️</div>
+                <h3 style={{ fontWeight: 600, color: 'white', marginBottom: '0.375rem' }}>Send an Email</h3>
+                <p style={{ color: '#64748b', fontSize: '0.875rem', marginBottom: '0.75rem' }}>Prefer async? Drop us a line anytime.</p>
+                <a href={`mailto:${EMAIL}`} style={{ color: '#c084fc', fontSize: '0.875rem', fontWeight: 500, textDecoration: 'none', wordBreak: 'break-all' }}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#d8b4fe')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#c084fc')}
+                >{EMAIL}</a>
               </div>
 
               {/* Details */}
-              <div className="card-glass p-6">
-                <h3 className="font-semibold text-white mb-4">Details</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3 text-slate-300 text-sm">
-                    <MapPin size={16} className="text-gold-400 flex-shrink-0" />
-                    Köln, Germany (Europe/Berlin)
-                  </li>
-                  <li className="flex items-center gap-3 text-slate-300 text-sm">
-                    <Globe size={16} className="text-gold-400 flex-shrink-0" />
-                    Serving clients across Europe & DACH
-                  </li>
-                  <li className="flex items-center gap-3 text-slate-300 text-sm">
-                    <Languages size={16} className="text-gold-400 flex-shrink-0" />
-                    English · Deutsch · Türkçe
-                  </li>
+              <div style={{ ...S.card, padding: '1.5rem' }}>
+                <h3 style={{ fontWeight: 600, color: 'white', marginBottom: '1rem' }}>Details</h3>
+                <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                  {[
+                    { Icon: MapPin, text: 'Köln, Germany (Europe/Berlin)' },
+                    { Icon: Globe, text: 'Serving clients across Europe & DACH' },
+                    { Icon: Languages, text: 'English · Deutsch · Türkçe' },
+                  ].map(({ Icon, text }) => (
+                    <li key={text} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#94a3b8', fontSize: '0.875rem' }}>
+                      <Icon size={15} color="#a78bfa" style={{ flexShrink: 0 }} />{text}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
