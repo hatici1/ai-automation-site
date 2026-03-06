@@ -152,14 +152,36 @@
                 <div class="platform-badge">Early Access — Limited Spots</div>
                 <h1>The AI Agent Marketplace<br><span class="platform-hero-sub">for DACH Small Businesses</span></h1>
                 <p class="platform-hero-desc">Stop building from scratch. Subscribe to pre-built AI agents that plug into your existing tools and start delivering value in days — not months. No dev team. No infrastructure headaches. Just results.</p>
-                <div class="platform-hero-cta">
-                    <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" class="btn primary-btn" target="_blank" rel="noopener">Get Early Access</a>
-                    <a href="#how-it-works" class="btn secondary-btn">How It Works</a>
-                </div>
+                <!-- Waitlist form — hero inline -->
+                <!-- Replace YOUR_FORM_ID with your Formspree form ID (free at formspree.io) -->
+                <form class="waitlist-form waitlist-form--hero" id="waitlist-hero" data-formspree="https://formspree.io/f/YOUR_FORM_ID" novalidate>
+                    <div class="waitlist-row">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="your@email.com"
+                            required
+                            aria-label="Your email address"
+                            class="waitlist-input"
+                        >
+                        <button type="submit" class="btn primary-btn waitlist-submit">
+                            <span class="waitlist-btn-text">Join the Waitlist</span>
+                            <span class="waitlist-btn-spinner" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="waitlist-success" role="alert" aria-live="polite" hidden>
+                        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                        You're on the list! We'll be in touch within 48 hours.
+                    </div>
+                    <div class="waitlist-error" role="alert" aria-live="polite" hidden>
+                        Something went wrong — please try <a href="contact.html">contacting us directly</a>.
+                    </div>
+                </form>
                 <div class="platform-hero-note">
                     <i class="fa-solid fa-circle-check" aria-hidden="true"></i> No commitment &nbsp;·&nbsp;
                     <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Cancel anytime &nbsp;·&nbsp;
                     <i class="fa-solid fa-circle-check" aria-hidden="true"></i> English · Deutsch · Türkçe support
+                    &nbsp;·&nbsp; <a href="#how-it-works" class="platform-hero-scroll">How it works <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
@@ -382,12 +404,65 @@
             </div>
         </section>
 
-        <!-- Final CTA -->
-        <section class="cta-section">
-            <div class="container cta-container">
-                <h2>Be one of the first to run AI agents in your business</h2>
-                <p>Early access is limited. Book a free 30-minute call and we'll confirm your spot, answer all your questions and configure your first agent together.</p>
-                <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" class="btn primary-btn" target="_blank" rel="noopener">Book Your Early Access Call</a>
+        <!-- Final Waitlist Section -->
+        <section class="waitlist-section" id="waitlist">
+            <div class="container">
+                <div class="waitlist-card">
+                    <div class="waitlist-card-left">
+                        <h2>Be one of the first to run AI agents in your business</h2>
+                        <p>Early access is limited. Drop your email and we'll reach out within 48 hours to confirm your spot, answer questions and configure your first agent together.</p>
+                        <ul class="waitlist-perks">
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Priority onboarding — skip the queue</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Early access pricing locked in for 12 months</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Shape the product with your feedback</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> No spam — max 1 email/week until launch</li>
+                        </ul>
+                        <p class="waitlist-alt">Prefer to talk first? <a href="https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min" target="_blank" rel="noopener">Book a free 30-minute call →</a></p>
+                    </div>
+                    <div class="waitlist-card-right">
+                        <!-- Replace YOUR_FORM_ID with your Formspree form ID (free at formspree.io) -->
+                        <form class="waitlist-form waitlist-form--card" id="waitlist-main" data-formspree="https://formspree.io/f/YOUR_FORM_ID" novalidate>
+                            <label class="waitlist-label" for="wl-name">Your name</label>
+                            <input id="wl-name" type="text" name="name" placeholder="Ada Lovelace" autocomplete="name" class="waitlist-input">
+
+                            <label class="waitlist-label" for="wl-email">Work email <span aria-hidden="true">*</span></label>
+                            <input id="wl-email" type="email" name="email" placeholder="ada@company.com" required autocomplete="email" class="waitlist-input">
+
+                            <label class="waitlist-label" for="wl-company">Company / team size</label>
+                            <select id="wl-company" name="team_size" class="waitlist-input waitlist-select">
+                                <option value="" disabled selected>Select team size</option>
+                                <option value="1-5">1–5 people</option>
+                                <option value="6-20">6–20 people</option>
+                                <option value="21-50">21–50 people</option>
+                                <option value="50+">50+ people</option>
+                            </select>
+
+                            <label class="waitlist-label" for="wl-agent">Most interesting agent</label>
+                            <select id="wl-agent" name="agent_interest" class="waitlist-input waitlist-select">
+                                <option value="" disabled selected>Which agent fits your need?</option>
+                                <option value="inbox">Inbox Agent (email triage)</option>
+                                <option value="sales">Sales Assistant Agent</option>
+                                <option value="edi">XML/EDI Monitor Agent</option>
+                                <option value="readiness">AI Readiness Agent (audit)</option>
+                                <option value="multiple">Multiple agents</option>
+                            </select>
+
+                            <button type="submit" class="btn primary-btn waitlist-submit waitlist-submit--full">
+                                <span class="waitlist-btn-text">Reserve My Spot</span>
+                                <span class="waitlist-btn-spinner" aria-hidden="true"></span>
+                            </button>
+
+                            <div class="waitlist-success" role="alert" aria-live="polite" hidden>
+                                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                                <strong>You're on the list!</strong> We'll be in touch within 48 hours.
+                            </div>
+                            <div class="waitlist-error" role="alert" aria-live="polite" hidden>
+                                Something went wrong — please <a href="contact.html">email us directly</a>.
+                            </div>
+                            <p class="waitlist-privacy"><i class="fa-solid fa-lock" aria-hidden="true"></i> GDPR-safe. No spam. Unsubscribe anytime.</p>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -407,5 +482,75 @@
 
     <script src="script.js"></script>
     <script src="translations.js"></script>
+    <script>
+    /**
+     * Waitlist form handler
+     * Submits to Formspree via fetch, shows in-page success/error state.
+     * To activate: replace YOUR_FORM_ID in the data-formspree attribute
+     * with your actual Formspree form ID (free at https://formspree.io).
+     */
+    (function () {
+      function handleWaitlistForm(form) {
+        var endpoint = form.dataset.formspree;
+        var submitBtn = form.querySelector('.waitlist-submit');
+        var btnText = submitBtn.querySelector('.waitlist-btn-text');
+        var spinner = submitBtn.querySelector('.waitlist-btn-spinner');
+        var successEl = form.querySelector('.waitlist-success');
+        var errorEl = form.querySelector('.waitlist-error');
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var email = form.querySelector('input[type="email"]');
+          if (!email || !email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            email.focus();
+            email.setCustomValidity('Please enter a valid email address.');
+            email.reportValidity();
+            return;
+          }
+          email.setCustomValidity('');
+
+          // Loading state
+          submitBtn.disabled = true;
+          btnText.style.display = 'none';
+          spinner.style.display = 'inline-block';
+          successEl.hidden = true;
+          errorEl.hidden = true;
+
+          var data = new FormData(form);
+
+          fetch(endpoint, {
+            method: 'POST',
+            body: data,
+            headers: { Accept: 'application/json' }
+          })
+            .then(function (res) {
+              if (res.ok) {
+                // Success
+                form.querySelectorAll('input, select, textarea').forEach(function (el) {
+                  el.value = '';
+                });
+                successEl.hidden = false;
+                successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              } else {
+                return res.json().then(function (body) {
+                  throw new Error(body.error || 'Server error');
+                });
+              }
+            })
+            .catch(function () {
+              errorEl.hidden = false;
+            })
+            .finally(function () {
+              submitBtn.disabled = false;
+              btnText.style.display = '';
+              spinner.style.display = 'none';
+            });
+        });
+      }
+
+      document.querySelectorAll('.waitlist-form').forEach(handleWaitlistForm);
+    })();
+    </script>
 </body>
 </html>
