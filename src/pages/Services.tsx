@@ -12,9 +12,9 @@ const S = {
 
 const services = [
   { id: 'ai-counseling', Icon: Briefcase, title: 'AI Counseling & Strategy', tagline: 'Clarity before code. Strategy before spend.', price: 'From $1,000', ctaLabel: 'Book an AI Audit', ctaHref: CAL, external: true,
-    bullets: ['AI readiness audit of your workflows & data','Ranked automation wins by ROI','Tool recommendations — n8n, Salesforce, LLMs','3–12 month roadmap with budgets & timelines','Monthly advisory to keep your plan on track'] },
-  { id: 'n8n', Icon: GitBranch, title: 'n8n Workflow Automation', tagline: '400+ integrations. Zero boilerplate.', price: 'From $2,500', ctaLabel: 'Discuss Your Workflow', ctaHref: '/contact', external: false,
-    bullets: ['Visual workflow design — see results instantly','400+ built-in connectors + any REST API','Custom JS/Python code nodes for complex logic','Cron jobs, webhooks, FTP watchers, event streams','AI nodes for LLM tasks built into workflows'] },
+    bullets: ['AI readiness audit of your workflows & data','Ranked automation wins by ROI','Tool recommendations — AI agents, Salesforce, LLMs','3–12 month roadmap with budgets & timelines','Monthly advisory to keep your plan on track'] },
+  { id: 'n8n', Icon: Bot, title: 'AI Agents & Systems', tagline: 'AI that does the work, not just answers.', price: 'From $2,500', ctaLabel: 'Scope Your AI System', ctaHref: '/contact', external: false,
+    bullets: ['AI agents that handle real tasks end to end','Connected to your tools, data and APIs','Human approval on the steps that matter','Monitoring, logging and cost controls built in','Handover docs and training for your team'] },
   { id: 'chatbots', Icon: MessageSquare, title: 'AI Chatbots & RAG Systems', tagline: 'Your knowledge base — made conversational.', price: 'From $5,000', ctaLabel: 'Build Your Chatbot', ctaHref: '/contact', external: false,
     bullets: ['Ingest PDFs, Word docs, URLs, databases','Semantic search with embeddings + vector DB','GPT-4o, Claude, Mistral or self-hosted LLMs','Deploy to website, Slack, Teams, WhatsApp','Auto-escalation to human agent when unsure'] },
   { id: 'xml-edi', Icon: FileCode2, title: 'XML / EDI & FTP Integration', tagline: 'Bridge your legacy to the modern world.', price: 'From $3,500', ctaLabel: 'Modernise Your Pipeline', ctaHref: '/contact', external: false,
@@ -41,20 +41,20 @@ const SCHEMA_SVC = [
     '@type': 'ItemList',
     'name': 'AI Automation Services',
     'itemListElement': [
-      {'@type':'ListItem','position':1,'item':{'@type':'Service','name':'AI Counseling & Strategy','description':'AI readiness audit, adoption roadmap and ROI analysis for US SMBs.','areaServed':'US','offers':{'@type':'Offer','price':'500','priceCurrency':'EUR'}}},
-      {'@type':'ListItem','position':2,'item':{'@type':'Service','name':'n8n Workflow Automation','description':'No-code workflow automation with 400+ integrations.','areaServed':'US','offers':{'@type':'Offer','price':'1200','priceCurrency':'EUR'}}},
-      {'@type':'ListItem','position':3,'item':{'@type':'Service','name':'AI Chatbots & RAG Systems','description':'Custom conversational AI using your private knowledge base.','areaServed':'US','offers':{'@type':'Offer','price':'2500','priceCurrency':'EUR'}}},
-      {'@type':'ListItem','position':4,'item':{'@type':'Service','name':'XML / EDI & FTP Integration','description':'Legacy file exchange automation and B2B data pipelines.','areaServed':'US','offers':{'@type':'Offer','price':'1800','priceCurrency':'EUR'}}},
+      {'@type':'ListItem','position':1,'item':{'@type':'Service','name':'AI Counseling & Strategy','description':'AI readiness audit, adoption roadmap and ROI analysis for US SMBs.','areaServed':'US','offers':{'@type':'Offer','price':'1000','priceCurrency':'USD'}}},
+      {'@type':'ListItem','position':2,'item':{'@type':'Service','name':'AI Agents & Systems','description':'Custom AI agents and systems that run business tasks end to end.','areaServed':'US','offers':{'@type':'Offer','price':'2500','priceCurrency':'USD'}}},
+      {'@type':'ListItem','position':3,'item':{'@type':'Service','name':'AI Chatbots & RAG Systems','description':'Custom conversational AI using your private knowledge base.','areaServed':'US','offers':{'@type':'Offer','price':'5000','priceCurrency':'USD'}}},
+      {'@type':'ListItem','position':4,'item':{'@type':'Service','name':'XML / EDI & FTP Integration','description':'Legacy file exchange automation and B2B data pipelines.','areaServed':'US','offers':{'@type':'Offer','price':'3500','priceCurrency':'USD'}}},
       {'@type':'ListItem','position':5,'item':{'@type':'Service','name':'AI Engineering & MLOps','description':'Custom ML models, data pipelines and production API deployment.','areaServed':'US'}},
-      {'@type':'ListItem','position':6,'item':{'@type':'Service','name':'Salesforce Development','description':'Custom Salesforce apps, Apex, Lightning components and CRM integrations.','areaServed':'US','offers':{'@type':'Offer','price':'1200','priceCurrency':'EUR'}}},
+      {'@type':'ListItem','position':6,'item':{'@type':'Service','name':'Salesforce Development','description':'Custom Salesforce apps, Apex, Lightning components and CRM integrations.','areaServed':'US','offers':{'@type':'Offer','price':'2500','priceCurrency':'USD'}}},
     ],
   },
   {
     '@type': 'FAQPage',
     'mainEntity': [
       {'@type':'Question','name':'What does an AI counseling session include?','acceptedAnswer':{'@type':'Answer','text':'A structured audit of your workflows, identification of automation opportunities, tool recommendations, a realistic ROI estimate and a prioritised 3–6 month adoption roadmap.'}},
-      {'@type':'Question','name':'How long does it take to build an n8n automation?','acceptedAnswer':{'@type':'Answer','text':'Most standard automations are built and tested within 1–2 weeks. Complex multi-system integrations may take 3–4 weeks.'}},
-      {'@type':'Question','name':'What is the minimum budget to get started?','acceptedAnswer':{'@type':'Answer','text':'An AI Readiness Audit starts from $1,000. Workflow automation packages start from $2,500. The free 30-minute consultation scopes what you need.'}},
+      {'@type':'Question','name':'How long does it take to build an AI system?','acceptedAnswer':{'@type':'Answer','text':'Most standard AI systems are built and tested within 1–2 weeks. Complex multi-system integrations may take 3–4 weeks.'}},
+      {'@type':'Question','name':'What is the minimum budget to get started?','acceptedAnswer':{'@type':'Answer','text':'An AI Readiness Audit starts from $1,000. AI agent and system builds start from $2,500. The free 30-minute consultation scopes what you need.'}},
       {'@type':'Question','name':'Can you integrate legacy FTP-based XML/EDI systems?','acceptedAnswer':{'@type':'Answer','text':'Yes. We specialise in bridging FTP/SFTP servers and XML/EDI file exchange with modern APIs and automation platforms like n8n.'}},
       {'@type':'Question','name':'Do I need technical knowledge to use the automations you build?','acceptedAnswer':{'@type':'Answer','text':'No. We document every workflow and provide hands-on training so your team can manage automations without coding.'}},
       {'@type':'Question','name':'Do you work with US companies?','acceptedAnswer':{'@type':'Answer','text':'Yes. We work remotely with US teams in English. Booking is by video call, and the calendar shows times in your time zone.'}},
@@ -74,8 +74,8 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="Services: n8n Automation, AI Chatbots, XML/EDI, Salesforce"
-        description="Custom n8n workflows, RAG chatbots, XML/EDI FTP pipelines, AI engineering and Salesforce development for US SMBs. Fixed-price packages from $1,000."
+        title="Services: AI Agents & Systems, Chatbots, XML/EDI, Salesforce"
+        description="Custom AI agents and systems, RAG chatbots, XML/EDI FTP pipelines, AI engineering and Salesforce development for US SMBs. Fixed-price packages from $1,000."
         canonical="/services"
         schema={SCHEMA_SVC}
       />

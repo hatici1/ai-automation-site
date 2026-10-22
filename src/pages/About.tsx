@@ -25,7 +25,7 @@ const SCHEMA_ABT = {
   'url': 'https://alp-ai.com/about',
   'worksFor': {'@type':'Organization','name':'AI Automation & Engineering Solutions','url':'https://alp-ai.com'},
   'address': {'@type':'PostalAddress','addressLocality':'Köln','addressCountry':'DE'},
-  'knowsAbout': ['n8n automation','Salesforce','Python','RAG chatbots','XML EDI','FastAPI','MLOps'],
+  'knowsAbout': ['AI agents','Salesforce','Python','RAG chatbots','XML EDI','FastAPI','MLOps'],
   'knowsLanguage': ['English','German','Turkish'],
 }
 
@@ -34,7 +34,7 @@ export default function About() {
     <>
       <SEO
         title="About — Hasan Atici, AI Engineer & Automation Specialist"
-        description="Hasan Atici — AI automation engineer based in Köln. Specialising in n8n, Salesforce, Python, RAG chatbots and XML/EDI for US SMBs."
+        description="Hasan Atici — AI automation engineer based in Köln. Specialising in AI agents and systems, Salesforce, Python, RAG chatbots and XML/EDI for US SMBs."
         canonical="/about"
         schema={SCHEMA_ABT}
       />

@@ -20,7 +20,7 @@ const stats = [
 
 const services = [
   { Icon: Briefcase, title: 'AI Strategy', sub: 'Know where AI fits — before you spend a cent.', href: '/services#ai-counseling' },
-  { Icon: GitBranch, title: 'n8n Automation', sub: 'Workflows running 24/7 across 400+ apps.', href: '/services#n8n' },
+  { Icon: Bot, title: 'AI Agents & Systems', sub: 'AI that runs your repetitive work 24/7.', href: '/services#n8n' },
   { Icon: MessageSquare, title: 'AI Chatbots', sub: 'Your knowledge base, made conversational.', href: '/services#chatbots' },
   { Icon: FileCode2, title: 'XML / EDI / FTP', sub: 'Legacy systems — modernised and error-free.', href: '/services#xml-edi' },
   { Icon: Bot, title: 'AI Engineering', sub: 'Custom ML models from data to deployed API.', href: '/services#ai-engineering' },
@@ -51,7 +51,7 @@ const SCHEMA_HOME = [
     'founder': { '@type': 'Person', 'name': 'Hasan Atici', 'jobTitle': 'AI Engineer & Automation Specialist' },
     'contactPoint': { '@type': 'ContactPoint', 'email': 'hasanm.atici@gmail.com', 'contactType': 'customer service', 'areaServed': 'US', 'availableLanguage': 'English' },
     'address': { '@type': 'PostalAddress', 'addressLocality': 'Köln', 'addressCountry': 'DE' },
-    'knowsAbout': ['n8n automation','AI engineering','AI counseling','Salesforce development','XML EDI integration','RAG chatbots','machine learning'],
+    'knowsAbout': ['AI agents','AI engineering','AI counseling','Salesforce development','XML EDI integration','RAG chatbots','machine learning'],
   },
   {
     '@type': 'LocalBusiness',
@@ -67,8 +67,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="AI Automation, n8n & Salesforce Specialist"
-        description="Stop losing time to manual work. Custom n8n automations, AI chatbots, XML/EDI integrations, Salesforce & AI strategy for US SMBs. Free 30-min call. Remote-first, built for US teams."
+        title="AI Systems & Automation Specialist"
+        description="Stop losing time to manual work. Custom AI agents and systems, AI chatbots, XML/EDI integrations, Salesforce & AI strategy for US SMBs. Free 30-min call. Remote-first, built for US teams."
         canonical="/"
         schema={SCHEMA_HOME}
       />
@@ -97,7 +97,7 @@ export default function Home() {
           </h1>
 
           <p style={{ color: '#94a3b8', fontSize: 'clamp(1rem, 2.5vw, 1.25rem)', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
-            We automate it — n8n, Salesforce, AI chatbots, integrations.{' '}
+            We build AI systems that do it — agents, chatbots, Salesforce, integrations.{' '}
             <strong style={{ color: '#e2e8f0' }}>Live in 2 weeks.</strong>
           </p>
 

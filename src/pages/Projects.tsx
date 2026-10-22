@@ -10,11 +10,11 @@ const S = {
 }
 
 const projects = [
-  { tags: ['n8n','LLM','CRM'], title: 'Lead Capture & Nurturing Automation', result: '60% faster lead response', metric: null,
+  { tags: ['AI agents','LLM','CRM'], title: 'Lead Capture & Nurturing Automation', result: '60% faster lead response', metric: null,
     bullets: ['Multi-channel capture from all marketing sources','AI-generated personalised follow-up emails','Auto deduplication, scoring & CRM push'],
     cta: { label: 'Build Something Similar', href: '/contact', ext: false } },
-  { tags: ['RAG','n8n AI Nodes','Vector DB'], title: 'AI Chatbot with Knowledge Base', result: '80% of queries answered instantly', metric: null,
-    bullets: ['Semantic search across private document collections','LLM layer with n8n AI nodes — no hallucination','Human-in-the-loop escalation for edge cases'],
+  { tags: ['RAG','LLM','Vector DB'], title: 'AI Chatbot with Knowledge Base', result: '80% of queries answered instantly', metric: null,
+    bullets: ['Semantic search across private document collections','LLM layer with retrieval grounding — no hallucination','Human-in-the-loop escalation for edge cases'],
     cta: { label: 'Build Something Similar', href: '/contact', ext: false } },
   { tags: ['XML/EDIFACT','FTP/SFTP','ERP'], title: 'XML/EDI FTP Pipeline Modernisation', result: '2.5h manual work eliminated daily', metric: 'Zero missed orders in 6 months post-launch.',
     bullets: ['SFTP polling every 5 min + auto file archiving','EDIFACT D96A parsing, validation, ERP push via REST','Slack alerts on failures + AI anomaly detection'],
@@ -35,7 +35,7 @@ const SCHEMA_PRJ = {
   'name': 'AI Automation Case Studies',
   'description': 'Real-world automation and AI projects for US SMBs.',
   'hasPart': [
-    {'@type':'Article','name':'Lead Capture & Nurturing Automation','keywords':['n8n','lead capture','CRM','LLM']},
+    {'@type':'Article','name':'Lead Capture & Nurturing Automation','keywords':['AI agents','lead capture','CRM','LLM']},
     {'@type':'Article','name':'AI Chatbot with Knowledge Base','keywords':['RAG','chatbot','vector DB']},
     {'@type':'Article','name':'XML/EDI FTP Pipeline Modernisation','keywords':['XML','EDI','FTP','SFTP','ERP']},
     {'@type':'Article','name':'AI Counseling & Adoption Roadmap','keywords':['AI counseling','AI strategy','SMB']},
@@ -47,8 +47,8 @@ export default function Projects() {
   return (
     <>
       <SEO
-        title="Case Studies: AI Automation, n8n, Chatbots & Salesforce Results"
-        description="Real-world automation case studies for US SMBs — n8n lead capture, RAG chatbots, XML/EDI pipelines, AI counseling and predictive analytics."
+        title="Case Studies: AI Systems, Chatbots & Salesforce Results"
+        description="Real-world automation case studies for US SMBs — AI lead capture, RAG chatbots, XML/EDI pipelines, AI counseling and predictive analytics."
         canonical="/projects"
         schema={SCHEMA_PRJ}
       />
