@@ -1,7 +1,7 @@
 import SEO from '../components/SEO'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { Briefcase, GitBranch, MessageSquare, FileCode2, Bot, Cloud, ArrowRight, Check } from 'lucide-react'
+import { Briefcase, MessageSquare, FileCode2, Bot, Cloud, ArrowRight, Check } from 'lucide-react'
 
 const CAL = 'https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min'
 const S = {
@@ -13,7 +13,7 @@ const S = {
 const services = [
   { id: 'ai-counseling', Icon: Briefcase, title: 'AI Counseling & Strategy', tagline: 'Clarity before code. Strategy before spend.', price: 'From $1,000', ctaLabel: 'Book an AI Audit', ctaHref: CAL, external: true,
     bullets: ['AI readiness audit of your workflows & data','Ranked automation wins by ROI','Tool recommendations — AI agents, Salesforce, LLMs','3–12 month roadmap with budgets & timelines','Monthly advisory to keep your plan on track'] },
-  { id: 'n8n', Icon: Bot, title: 'AI Agents & Systems', tagline: 'AI that does the work, not just answers.', price: 'From $2,500', ctaLabel: 'Scope Your AI System', ctaHref: '/contact', external: false,
+  { id: 'ai-systems', Icon: Bot, title: 'AI Agents & Systems', tagline: 'AI that does the work, not just answers.', price: 'From $2,500', ctaLabel: 'Scope Your AI System', ctaHref: '/contact', external: false,
     bullets: ['AI agents that handle real tasks end to end','Connected to your tools, data and APIs','Human approval on the steps that matter','Monitoring, logging and cost controls built in','Handover docs and training for your team'] },
   { id: 'chatbots', Icon: MessageSquare, title: 'AI Chatbots & RAG Systems', tagline: 'Your knowledge base — made conversational.', price: 'From $5,000', ctaLabel: 'Build Your Chatbot', ctaHref: '/contact', external: false,
     bullets: ['Ingest PDFs, Word docs, URLs, databases','Semantic search with embeddings + vector DB','GPT-4o, Claude, Mistral or self-hosted LLMs','Deploy to website, Slack, Teams, WhatsApp','Auto-escalation to human agent when unsure'] },
@@ -22,7 +22,7 @@ const services = [
   { id: 'ai-engineering', Icon: Bot, title: 'AI Engineering & MLOps', tagline: 'From data to deployed model — end to end.', price: 'Custom quote', ctaLabel: 'Discuss Your ML Project', ctaHref: '/contact', external: false,
     bullets: ['Problem exploration & data assessment','Data pipelines from heterogeneous sources','Model training, testing & iterative tuning','FastAPI deployment in Docker or serverless','MLOps monitoring, drift detection, retraining'] },
   { id: 'salesforce', Icon: Cloud, title: 'Salesforce Development & CRM', tagline: 'Your CRM, built around how you actually sell.', price: 'From $2,500', ctaLabel: 'Discuss Your CRM Needs', ctaHref: '/contact', external: false,
-    bullets: ['Custom objects, fields & Apex programming','Lightning Web Components & Flow automations','REST/SOAP integrations with any external system','Two-way n8n ↔ Salesforce real-time sync','Team training & full documentation included'] },
+    bullets: ['Custom objects, fields & Apex programming','Lightning Web Components & Flow automations','REST/SOAP integrations with any external system','Two-way AI ↔ Salesforce real-time sync','Team training & full documentation included'] },
 ]
 
 const packages = [
@@ -55,7 +55,7 @@ const SCHEMA_SVC = [
       {'@type':'Question','name':'What does an AI counseling session include?','acceptedAnswer':{'@type':'Answer','text':'A structured audit of your workflows, identification of automation opportunities, tool recommendations, a realistic ROI estimate and a prioritised 3–6 month adoption roadmap.'}},
       {'@type':'Question','name':'How long does it take to build an AI system?','acceptedAnswer':{'@type':'Answer','text':'Most standard AI systems are built and tested within 1–2 weeks. Complex multi-system integrations may take 3–4 weeks.'}},
       {'@type':'Question','name':'What is the minimum budget to get started?','acceptedAnswer':{'@type':'Answer','text':'An AI Readiness Audit starts from $1,000. AI agent and system builds start from $2,500. The free 30-minute consultation scopes what you need.'}},
-      {'@type':'Question','name':'Can you integrate legacy FTP-based XML/EDI systems?','acceptedAnswer':{'@type':'Answer','text':'Yes. We specialise in bridging FTP/SFTP servers and XML/EDI file exchange with modern APIs and automation platforms like n8n.'}},
+      {'@type':'Question','name':'Can you integrate legacy FTP-based XML/EDI systems?','acceptedAnswer':{'@type':'Answer','text':'Yes. We specialise in bridging FTP/SFTP servers and XML/EDI file exchange with modern APIs and AI agents.'}},
       {'@type':'Question','name':'Do I need technical knowledge to use the automations you build?','acceptedAnswer':{'@type':'Answer','text':'No. We document every workflow and provide hands-on training so your team can manage automations without coding.'}},
       {'@type':'Question','name':'Do you work with US companies?','acceptedAnswer':{'@type':'Answer','text':'Yes. We work remotely with US teams in English. Booking is by video call, and the calendar shows times in your time zone.'}},
     ],

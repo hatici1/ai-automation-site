@@ -8,7 +8,7 @@ const S = {
   card: { background: 'rgba(15,15,26,0.8)', border: '1px solid rgba(30,30,53,0.9)', borderRadius: '1rem' } as React.CSSProperties,
 }
 
-const tech = ['n8n','Salesforce / Apex','Python','PyTorch','scikit-learn','FastAPI','Docker','OpenAI / Claude APIs','RAG / Embeddings','XML / EDI / EDIFACT','FTP / SFTP','Vector Databases']
+const tech = ['AI agents','Salesforce / Apex','Python','PyTorch','scikit-learn','FastAPI','Docker','OpenAI / Claude APIs','RAG / Embeddings','XML / EDI / EDIFACT','FTP / SFTP','Vector Databases']
 const values = [
   { t: 'Fixed prices', s: 'You know the cost before we start.' },
   { t: 'No jargon', s: 'We explain everything in plain language.' },

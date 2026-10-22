@@ -1,6 +1,6 @@
 import SEO from '../components/SEO'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Check, Zap, DollarSign, Globe, Wrench, Briefcase, GitBranch, MessageSquare, FileCode2, Bot, Cloud } from 'lucide-react'
+import { ArrowRight, Check, Zap, DollarSign, Globe, Wrench, Briefcase, MessageSquare, FileCode2, Bot, Cloud } from 'lucide-react'
 
 const CAL = 'https://cal.com/hasan-at%C4%B1c%C4%B1-ari3do/30min'
 
@@ -20,7 +20,7 @@ const stats = [
 
 const services = [
   { Icon: Briefcase, title: 'AI Strategy', sub: 'Know where AI fits — before you spend a cent.', href: '/services#ai-counseling' },
-  { Icon: Bot, title: 'AI Agents & Systems', sub: 'AI that runs your repetitive work 24/7.', href: '/services#n8n' },
+  { Icon: Bot, title: 'AI Agents & Systems', sub: 'AI that runs your repetitive work 24/7.', href: '/services#ai-systems' },
   { Icon: MessageSquare, title: 'AI Chatbots', sub: 'Your knowledge base, made conversational.', href: '/services#chatbots' },
   { Icon: FileCode2, title: 'XML / EDI / FTP', sub: 'Legacy systems — modernised and error-free.', href: '/services#xml-edi' },
   { Icon: Bot, title: 'AI Engineering', sub: 'Custom ML models from data to deployed API.', href: '/services#ai-engineering' },
