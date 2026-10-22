@@ -21,7 +21,7 @@ const SCHEMA_CNT = {
     'name': 'AI Automation & Engineering Solutions',
     'email': 'hasanm.atici@gmail.com',
     'address': {'@type':'PostalAddress','addressLocality':'Köln','addressCountry':'DE'},
-    'contactPoint': {'@type':'ContactPoint','contactType':'customer service','email':'hasanm.atici@gmail.com','availableLanguage':['English','German','Turkish']},
+    'contactPoint': {'@type':'ContactPoint','contactType':'customer service','email':'hasanm.atici@gmail.com','availableLanguage':'English'},
   },
 }
 
@@ -30,7 +30,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact — Book a Free AI Automation Consultation"
-        description="Book a free 30-minute consultation with Hasan Atici. Fixed-price proposal in 48h. Go live in 2 weeks. Based in Köln, serving all of Europe."
+        description="Book a free 30-minute consultation with Hasan Atici. Fixed-price proposal in 48h. Go live in 2 weeks. Remote-first, serving US companies."
         canonical="/contact"
         schema={SCHEMA_CNT}
       />
@@ -83,7 +83,7 @@ export default function Contact() {
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                   {[
                     { Icon: MapPin, text: 'Köln, Germany (Europe/Berlin)' },
-                    { Icon: Globe, text: 'Serving clients across Europe & DACH' },
+                    { Icon: Globe, text: 'Serving US companies, fully remote' },
                     { Icon: Languages, text: 'English · Deutsch · Türkçe' },
                   ].map(({ Icon, text }) => (
                     <li key={text} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: '#94a3b8', fontSize: '0.875rem' }}>

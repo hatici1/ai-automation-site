@@ -9,7 +9,7 @@ export default function Footer() {
             AI Solutions
           </span>
           <p style={{ color: '#475569', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-            © 2026 AI Automation & Engineering Solutions. Köln, Germany.
+            © 2026 AI Automation & Engineering Solutions. Remote-first, working with US teams.
           </p>
         </div>
         <nav style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>

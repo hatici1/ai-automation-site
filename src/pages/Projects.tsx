@@ -33,7 +33,7 @@ const SCHEMA_PRJ = {
   '@type': 'CollectionPage',
   'url': 'https://alp-ai.com/projects',
   'name': 'AI Automation Case Studies',
-  'description': 'Real-world automation and AI projects for DACH SMBs.',
+  'description': 'Real-world automation and AI projects for US SMBs.',
   'hasPart': [
     {'@type':'Article','name':'Lead Capture & Nurturing Automation','keywords':['n8n','lead capture','CRM','LLM']},
     {'@type':'Article','name':'AI Chatbot with Knowledge Base','keywords':['RAG','chatbot','vector DB']},
@@ -48,7 +48,7 @@ export default function Projects() {
     <>
       <SEO
         title="Case Studies: AI Automation, n8n, Chatbots & Salesforce Results"
-        description="Real-world automation case studies for DACH SMBs — n8n lead capture, RAG chatbots, XML/EDI pipelines, AI counseling and predictive analytics."
+        description="Real-world automation case studies for US SMBs — n8n lead capture, RAG chatbots, XML/EDI pipelines, AI counseling and predictive analytics."
         canonical="/projects"
         schema={SCHEMA_PRJ}
       />
@@ -57,7 +57,7 @@ export default function Projects() {
       <section style={{ padding: '6rem 0 3rem', textAlign: 'center', background: 'radial-gradient(ellipse 70% 40% at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 70%)' }}>
         <div style={S.maxW}>
           <h1 style={{ fontWeight: 800, fontSize: 'clamp(2rem, 5vw, 3rem)', letterSpacing: '-0.02em', marginBottom: '0.75rem' }}>Case Studies</h1>
-          <p style={{ color: '#94a3b8', fontSize: '1.125rem' }}>Real projects. Real results. For DACH SMBs.</p>
+          <p style={{ color: '#94a3b8', fontSize: '1.125rem' }}>Real projects. Real results. For US SMBs.</p>
         </div>
       </section>
 

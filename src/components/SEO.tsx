@@ -11,7 +11,7 @@ interface SEOProps {
 }
 
 export default function SEO({ title, description, canonical, schema }: SEOProps) {
-  const fullTitle = `${title} | AI Automation & Engineering — Köln`
+  const fullTitle = `${title} | AI Automation & Engineering`
   const url = `${SITE_URL}${canonical}`
   const schemaJson = schema
     ? JSON.stringify(Array.isArray(schema) ? { '@context': 'https://schema.org', '@graph': schema } : schema)
@@ -24,7 +24,6 @@ export default function SEO({ title, description, canonical, schema }: SEOProps)
       <link rel="canonical" href={url} />
       <meta name="robots" content="index, follow" />
       <link rel="alternate" hrefLang="en" href={url} />
-      <link rel="alternate" hrefLang="de" href={url} />
       <link rel="alternate" hrefLang="x-default" href={url} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="AI Automation & Engineering Solutions" />

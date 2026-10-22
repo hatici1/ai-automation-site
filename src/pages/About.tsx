@@ -34,7 +34,7 @@ export default function About() {
     <>
       <SEO
         title="About — Hasan Atici, AI Engineer & Automation Specialist"
-        description="Hasan Atici — AI automation engineer based in Köln. Specialising in n8n, Salesforce, Python, RAG chatbots and XML/EDI for DACH SMBs."
+        description="Hasan Atici — AI automation engineer based in Köln. Specialising in n8n, Salesforce, Python, RAG chatbots and XML/EDI for US SMBs."
         canonical="/about"
         schema={SCHEMA_ABT}
       />
@@ -56,14 +56,14 @@ export default function About() {
               </div>
               <div>
                 <h2 style={{ fontWeight: 700, color: 'white', fontSize: '1.125rem' }}>Hasan Atici</h2>
-                <p style={{ color: '#a78bfa', fontSize: '0.875rem', marginTop: '0.125rem' }}>AI Counselor & Automation Engineer · Köln, Germany</p>
+                <p style={{ color: '#a78bfa', fontSize: '0.875rem', marginTop: '0.125rem' }}>AI Counselor & Automation Engineer · Remote</p>
               </div>
             </div>
             <p style={{ color: '#94a3b8', lineHeight: 1.75, marginBottom: '1rem', fontSize: '0.9375rem' }}>
               I built AI Solutions because small businesses keep spending thousands of hours on work that software should handle. My background spans software development, data science, business process optimisation and legacy system integration.
             </p>
             <p style={{ color: '#94a3b8', lineHeight: 1.75, fontSize: '0.9375rem' }}>
-              Today I help DACH SMBs automate operations, integrate XML/EDI pipelines, deploy AI chatbots and build intelligent products — at prices that actually make sense for companies under 200 people.
+              Today I help US SMBs automate operations, integrate XML/EDI pipelines, deploy AI chatbots and build intelligent products — at prices that actually make sense for companies under 200 people.
             </p>
           </div>
         </div>

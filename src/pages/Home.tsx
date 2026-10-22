@@ -15,7 +15,7 @@ const S = {
 
 const stats = [
   { v: '20h+', l: 'Saved per week' }, { v: '2 wks', l: 'Average go-live' },
-  { v: '400+', l: 'Tools connected' }, { v: '€0', l: 'First call' },
+  { v: '400+', l: 'Tools connected' }, { v: '$0', l: 'First call' },
 ]
 
 const services = [
@@ -36,7 +36,7 @@ const steps = [
 
 const why = [
   { Icon: Zap, title: 'Fast delivery', sub: 'Most projects live within 2 weeks.' },
-  { Icon: DollarSign, title: 'SMB pricing', sub: 'Fixed packages from €500. No lock-ins.' },
+  { Icon: DollarSign, title: 'SMB pricing', sub: 'Fixed packages from $500. No lock-ins.' },
   { Icon: Globe, title: 'EN / DE / TR', sub: 'No miscommunication. No middlemen.' },
   { Icon: Wrench, title: 'Built to last', sub: 'Documented, trained, yours to own.' },
 ]
@@ -49,7 +49,7 @@ const SCHEMA_HOME = [
     'name': 'AI Automation & Engineering Solutions',
     'url': 'https://alp-ai.com',
     'founder': { '@type': 'Person', 'name': 'Hasan Atici', 'jobTitle': 'AI Engineer & Automation Specialist' },
-    'contactPoint': { '@type': 'ContactPoint', 'email': 'hasanm.atici@gmail.com', 'contactType': 'customer service', 'areaServed': ['DE','AT','CH','EU'], 'availableLanguage': ['English','German','Turkish'] },
+    'contactPoint': { '@type': 'ContactPoint', 'email': 'hasanm.atici@gmail.com', 'contactType': 'customer service', 'areaServed': 'US', 'availableLanguage': 'English' },
     'address': { '@type': 'PostalAddress', 'addressLocality': 'Köln', 'addressCountry': 'DE' },
     'knowsAbout': ['n8n automation','AI engineering','AI counseling','Salesforce development','XML EDI integration','RAG chatbots','machine learning'],
   },
@@ -57,9 +57,9 @@ const SCHEMA_HOME = [
     '@type': 'LocalBusiness',
     'name': 'AI Automation & Engineering Solutions',
     'url': 'https://alp-ai.com',
-    'priceRange': '€€',
+    'priceRange': '$$',
     'address': { '@type': 'PostalAddress', 'addressLocality': 'Köln', 'addressCountry': 'DE' },
-    'serviceArea': { '@type': 'AdministrativeArea', 'name': 'DACH region' },
+    'serviceArea': { '@type': 'Country', 'name': 'United States' },
   },
 ]
 
@@ -68,7 +68,7 @@ export default function Home() {
     <>
       <SEO
         title="AI Automation, n8n & Salesforce Specialist"
-        description="Stop losing time to manual work. Custom n8n automations, AI chatbots, XML/EDI integrations, Salesforce & AI strategy for DACH SMBs. Free 30-min call. Based in Köln."
+        description="Stop losing time to manual work. Custom n8n automations, AI chatbots, XML/EDI integrations, Salesforce & AI strategy for US SMBs. Free 30-min call. Remote-first, built for US teams."
         canonical="/"
         schema={SCHEMA_HOME}
       />
@@ -84,7 +84,7 @@ export default function Home() {
           {/* Badge */}
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(139,92,246,0.1)', border: '1px solid rgba(139,92,246,0.3)', borderRadius: '9999px', padding: '0.375rem 1rem', fontSize: '0.8125rem', color: '#c084fc', marginBottom: '2rem' }}>
             <Check size={13} />
-            AI & Automation Specialist — Köln, Germany
+            AI & Automation Specialist — Remote, for US teams
           </div>
 
           {/* Headline */}
@@ -112,7 +112,7 @@ export default function Home() {
           </div>
 
           <p style={{ color: '#475569', fontSize: '0.8125rem', marginTop: '1.5rem' }}>
-            Free · No commitment · GDPR-safe · Results within 2 weeks
+            Free · No commitment · Results within 2 weeks
           </p>
         </div>
       </section>
@@ -183,7 +183,7 @@ export default function Home() {
       <section className="section-pad">
         <div style={S.maxW}>
           <h2 style={{ fontWeight: 800, fontSize: 'clamp(1.5rem, 4vw, 2rem)', textAlign: 'center', marginBottom: '3rem', letterSpacing: '-0.02em' }}>
-            Why DACH SMBs Choose Us
+            Why US SMBs Choose Us
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1rem' }}>
             {why.map(({ Icon, title, sub }) => (
@@ -211,13 +211,13 @@ export default function Home() {
               </span>
             </h2>
             <p style={{ color: '#94a3b8', marginBottom: '2rem', fontSize: '1rem', position: 'relative' }}>
-              DACH businesses save 20+ hours/week. The first call is free.
+              US businesses save 20+ hours/week. The first call is free.
             </p>
             <a href={CAL} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ fontSize: '1rem', position: 'relative', display: 'inline-flex' }}>
               Book Your Free Call <ArrowRight size={18} />
             </a>
             <p style={{ color: '#475569', fontSize: '0.75rem', marginTop: '1rem', position: 'relative' }}>
-              GDPR-safe · EU infrastructure · EN / DE / TR
+              Fixed-price · No lock-ins · Fully remote
             </p>
           </div>
         </div>
