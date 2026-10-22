@@ -36,7 +36,7 @@ const steps = [
 
 const why = [
   { Icon: Zap, title: 'Fast delivery', sub: 'Most projects live within 2 weeks.' },
-  { Icon: DollarSign, title: 'SMB pricing', sub: 'Fixed packages from $500. No lock-ins.' },
+  { Icon: DollarSign, title: 'SMB pricing', sub: 'Fixed packages from $1,000. No lock-ins.' },
   { Icon: Globe, title: 'EN / DE / TR', sub: 'No miscommunication. No middlemen.' },
   { Icon: Wrench, title: 'Built to last', sub: 'Documented, trained, yours to own.' },
 ]
