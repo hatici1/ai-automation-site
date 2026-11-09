@@ -11,7 +11,7 @@ const S = {
 }
 
 const services = [
-  { id: 'ai-counseling', Icon: Briefcase, title: 'AI Counseling & Strategy', tagline: 'Clarity before code. Strategy before spend.', price: 'From $1,000', ctaLabel: 'Book an AI Audit', ctaHref: CAL, external: true,
+  { id: 'ai-counseling', Icon: Briefcase, title: 'AI Counseling & Strategy', tagline: 'Clarity before code. Strategy before spend.', price: 'From $500', ctaLabel: 'Book an AI Audit', ctaHref: CAL, external: true,
     bullets: ['AI readiness audit of your workflows & data','Ranked automation wins by ROI','Tool recommendations — AI agents, Salesforce, LLMs','3–12 month roadmap with budgets & timelines','Monthly advisory to keep your plan on track'] },
   { id: 'ai-systems', Icon: Bot, title: 'AI Agents & Systems', tagline: 'AI that does the work, not just answers.', price: 'From $2,500', ctaLabel: 'Scope Your AI System', ctaHref: '/contact', external: false,
     bullets: ['AI agents that handle real tasks end to end','Connected to your tools, data and APIs','Human approval on the steps that matter','Monitoring, logging and cost controls built in','Handover docs and training for your team'] },
@@ -26,7 +26,7 @@ const services = [
 ]
 
 const packages = [
-  { title: 'AI Readiness Audit', sub: 'Clarity. Direction. Confidence.', price: '$1,000', desc: 'Know exactly what to automate and which tools to use.' },
+  { title: 'AI Readiness Audit', sub: 'Clarity. Direction. Confidence.', price: '$500', desc: 'One workflow mapped, top 5 AI wins ranked, written plan in 5 business days.' },
   { title: 'Salesforce Reset', sub: 'Structure. Clarity. Control.', price: '$2,500', desc: 'Rebuild your CRM into a system your team trusts.' },
   { title: 'AI Inbox Automation', sub: 'Routing. Understanding. Relief.', price: '$3,000', desc: 'AI reads, classifies and routes every message automatically.' },
   { title: 'XML/EDI Pipeline', sub: 'Reliable. Monitored. Error-free.', price: '$3,500', desc: 'FTP watcher + XML/EDI parser + ERP push + real-time alerts.' },
@@ -41,7 +41,7 @@ const SCHEMA_SVC = [
     '@type': 'ItemList',
     'name': 'AI Automation Services',
     'itemListElement': [
-      {'@type':'ListItem','position':1,'item':{'@type':'Service','name':'AI Counseling & Strategy','description':'AI readiness audit, adoption roadmap and ROI analysis for US SMBs.','areaServed':'US','offers':{'@type':'Offer','price':'1000','priceCurrency':'USD'}}},
+      {'@type':'ListItem','position':1,'item':{'@type':'Service','name':'AI Counseling & Strategy','description':'AI readiness audit, adoption roadmap and ROI analysis for US SMBs.','areaServed':'US','offers':{'@type':'Offer','price':'500','priceCurrency':'USD'}}},
       {'@type':'ListItem','position':2,'item':{'@type':'Service','name':'AI Agents & Systems','description':'Custom AI agents and systems that run business tasks end to end.','areaServed':'US','offers':{'@type':'Offer','price':'2500','priceCurrency':'USD'}}},
       {'@type':'ListItem','position':3,'item':{'@type':'Service','name':'AI Chatbots & RAG Systems','description':'Custom conversational AI using your private knowledge base.','areaServed':'US','offers':{'@type':'Offer','price':'5000','priceCurrency':'USD'}}},
       {'@type':'ListItem','position':4,'item':{'@type':'Service','name':'XML / EDI & FTP Integration','description':'Legacy file exchange automation and B2B data pipelines.','areaServed':'US','offers':{'@type':'Offer','price':'3500','priceCurrency':'USD'}}},
@@ -54,7 +54,7 @@ const SCHEMA_SVC = [
     'mainEntity': [
       {'@type':'Question','name':'What does an AI counseling session include?','acceptedAnswer':{'@type':'Answer','text':'A structured audit of your workflows, identification of automation opportunities, tool recommendations, a realistic ROI estimate and a prioritised 3–6 month adoption roadmap.'}},
       {'@type':'Question','name':'How long does it take to build an AI system?','acceptedAnswer':{'@type':'Answer','text':'Most standard AI systems are built and tested within 1–2 weeks. Complex multi-system integrations may take 3–4 weeks.'}},
-      {'@type':'Question','name':'What is the minimum budget to get started?','acceptedAnswer':{'@type':'Answer','text':'An AI Readiness Audit starts from $1,000. AI agent and system builds start from $2,500. The free 30-minute consultation scopes what you need.'}},
+      {'@type':'Question','name':'What is the minimum budget to get started?','acceptedAnswer':{'@type':'Answer','text':'An AI Readiness Audit is a flat $500. AI agent and system builds start from $2,500. The free 30-minute consultation scopes what you need.'}},
       {'@type':'Question','name':'Can you integrate legacy FTP-based XML/EDI systems?','acceptedAnswer':{'@type':'Answer','text':'Yes. We specialise in bridging FTP/SFTP servers and XML/EDI file exchange with modern APIs and AI agents.'}},
       {'@type':'Question','name':'Do I need technical knowledge to use the automations you build?','acceptedAnswer':{'@type':'Answer','text':'No. We document every workflow and provide hands-on training so your team can manage automations without coding.'}},
       {'@type':'Question','name':'Do you work with US companies?','acceptedAnswer':{'@type':'Answer','text':'Yes. We work remotely with US teams in English. Booking is by video call, and the calendar shows times in your time zone.'}},
@@ -75,7 +75,7 @@ export default function Services() {
     <>
       <SEO
         title="Services: AI Agents & Systems, Chatbots, XML/EDI, Salesforce"
-        description="Custom AI agents and systems, RAG chatbots, XML/EDI FTP pipelines, AI engineering and Salesforce development for US SMBs. Fixed-price packages from $1,000."
+        description="Custom AI agents and systems, RAG chatbots, XML/EDI FTP pipelines, AI engineering and Salesforce development for US SMBs. Fixed-price packages from $500."
         canonical="/services"
         schema={SCHEMA_SVC}
       />
